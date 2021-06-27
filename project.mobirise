@@ -246,6 +246,12 @@
               ".custom-button": {
                 "margin-right": "0"
               }
+            },
+            ".custom-section-text-title": {
+              "text-align": "center"
+            },
+            ".mbr-text, .box": {
+              "text-align": "center"
             }
           },
           "_name": "events3",
