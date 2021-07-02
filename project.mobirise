@@ -30,7 +30,8 @@
       "nameSelectPreset": "church",
       "presetSourceTheme": "churchamp",
       "additionalSetColors": [
-        "#ffffff"
+        "#ffffff",
+        "#3413f9"
       ]
     },
     "path": "@PROJECT_PATH@",
@@ -54,7 +55,7 @@
       }
     ],
     "imageResize": true,
-    "uniqCompNum": 7,
+    "uniqCompNum": 8,
     "versionPublish": "5.3.0",
     "screenshot": "screenshot.png"
   },
@@ -185,86 +186,54 @@
         {
           "alias": false,
           "_styles": {
-            "padding": "40px",
-            "padding-top": "(@paddingTop * 1rem)",
-            "padding-bottom": "(@paddingBottom * 1rem)",
-            "@media (max-width: 767px)": {
-              "padding": "0",
+            "& when not (@fullScreen)": {
               "padding-top": "(@paddingTop * 1rem)",
-              "padding-bottom": "(@paddingBottom * 1rem)",
-              "span": {
-                "margin-top": "7px",
-                "margin-bottom": "7px"
-              },
-              ".custom-button": {
-                "margin-top": "15px",
-                "margin-left": "13px"
+              "padding-bottom": "(@paddingBottom * 1rem)"
+            },
+            "& when (@bg-type = 'image')": {
+              "background-image": "url(@bg-value)",
+              "& when (@overlay)": {
+                ".mbr-overlay": {
+                  "background": "@overlayColor",
+                  "opacity": "@overlayOpacity"
+                }
               }
             },
-            "background-color": "@primaryColor",
+            "& when (@bg-type = 'color')": {
+              "background-color": "@bg-value"
+            },
+            ".iconfont-wrapper": {
+              "height": "(@iconsSize * 1rem)",
+              "width": "(@iconsSize * 1rem)",
+              "margin-bottom": "2rem"
+            },
             ".amp-iconfont": {
-              "color": "#fff",
-              "vertical-align": "middle",
-              "font-size": "(@iconsSize * 0.5rem)",
-              "width": "(@iconsSize * 0.5rem)",
-              "margin-right": "0.1rem"
+              "color": "@iconColor",
+              "font-size": "(@iconsSize * 1.2rem)",
+              "width": "(@iconsSize * 1.2rem)",
+              "vertical-align": "middle"
             },
-            ".custom-column": {
-              "padding-left": "30px",
-              "border-left": "1px solid rgba(255, 255, 255, 0.3)",
-              "justify-content": "space-between",
-              "@media (max-width: 991px)": {
-                "padding-left": "0",
-                "border-left": "none"
-              }
-            },
-            ".custom-button": {
-              "min-height": "50px",
-              "min-width": "150px",
-              "padding": "10px 20px !important",
-              "border": "2px solid",
-              "&:hover": {
-                "color": "@primaryColor !important",
-                "background-color": "#FFF  !important"
-              },
-              "@media (min-width: 768px)": {
-                "margin-right": "13px"
-              }
-            },
+            "align-items": "center",
+            "display": "flex",
             ".display-4": {
-              "font-size": "1.13rem"
+              "font-size": "1.85rem"
             },
-            ".box > *": {
-              "display": "inline"
+            ".mbr-section-title, .mbr-section-btn": {
+              "color": "#000000"
             },
-            ".custom-gap": {
-              "margin-bottom": "5px"
-            },
-            "@media (min-width: 768px) and (max-width: 991px)": {
-              ".container": {
-                "padding-left": "4px"
-              },
-              ".custom-button": {
-                "margin-right": "0"
-              }
-            },
-            ".custom-section-text-title": {
-              "text-align": "center"
-            },
-            ".mbr-text, .box": {
-              "text-align": "center"
+            ".mbr-section-subtitle, .mbr-section-btn": {
+              "color": "#000000"
             }
           },
-          "_name": "events3",
-          "_customHTML": "<section class=\"events3\" group=\"Events\" plugins=\"amp-main\">\n\t<mbr-parameters>\n\t<!-- Block parameters controls (Blue \"Gear\" panel) -->\n\t<header>Size</header>\n\t<input type=\"range\" inline title=\"Top\" name=\"paddingTop\" min=\"0\" max=\"10\" step=\"1\" value=\"2\">\n\t<input type=\"range\" inline title=\"Bottom\" name=\"paddingBottom\" min=\"0\" max=\"10\" step=\"1\" value=\"1\">\n\t<header>Show/Hide</header>\n\t<input type=\"checkbox\" title=\"Buttons\" name=\"showButtons\">\n\t<header>Icons</header>\n\t<input type=\"checkbox\" title=\"Show Icons\" name=\"showIcons\" checked required>\n\t<input type=\"range\" inline title=\"Size\" name=\"iconsSize\" min=\"1\" max=\"4\" step=\"0.1\" value=\"2\" condition=\"showIcons\">\n\t</mbr-parameters>\n\t<!-- Block parameters controls (Blue \"Gear\" panel) -->\n\t\t<div class=\"container\">\n\t\t\t<div class=\"mbr-row\">\n\t\t\t\t<div class=\"mbr-col-sm-12 mbr-col-md-12 mbr-col-lg-5\">\n\t\t\t\t\t<div class=\"box\">\n\t\t\t\t\t\t<div class=\"iconfont-wrapper\" mbr-if=\"showIcons\">\n\t\t\t\t\t\t\t<span mbr-icon class=\"amp-iconfont fa fa-calendar\"></span>\n\t\t\t\t\t\t</div>\n\t\t\t\t\t\t<p class=\"mbr-text custom-section-text mbr-white mbr-fonts-style mbr-text-i\" mbr-theme-style=\"display-4\" data-app-selector=\".mbr-text, .box\">Office hours: Monday - Thursday:&nbsp; 9:00am - 3:30pm&nbsp; CLOSED: Friday<br>Worship Service: Sunday @ 10:00am<br></p>\n\t\t\t\t\t</div>\n\t\t\t\t\t<p class=\"custom-section-text-title mbr-bold6 mbr-white mbr-fonts-style\" mbr-theme-style=\"display-5\" data-app-selector=\".custom-section-text-title\">Welcome to our church</p>\n\t\t\t\t</div>\n\t\t\t\t<div class=\"mbr-col-sm-12 mbr-col-md-12 mbr-col-lg-7\">\n\t\t\t\t\t<div class=\"mbr-flex flex-wrap custom-column\">\n\t\t\t\t\t\t<div class=\"box\">\n\t\t\t\t\t\t\t<div class=\"iconfont-wrapper\" mbr-if=\"showIcons\">\n\t\t\t\t\t\t\t\t<span mbr-icon class=\"amp-iconfont fa fa-map-marker\"></span>\n\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t<p class=\"mbr-text custom-section-text custom-gap mbr-white mbr-fonts-style mbr-text-i\" mbr-theme-style=\"display-4\" data-app-selector=\".mbr-text, .box\">Brooke Road United Methodist Church</p>\n\t\t\t\t\t\t\t<br>\n\t\t\t\t\t\t\t<div class=\"iconfont-wrapper\" mbr-if=\"showIcons\">\n\t\t\t\t\t\t\t\t<span mbr-icon class=\"amp-iconfont fa fa-location-arrow\"></span>\n\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t<p class=\"mbr-text custom-section-text mbr-white mbr-fonts-style mbr-text-i\" mbr-theme-style=\"display-4\" data-app-selector=\".mbr-text, .box\">1404 Brooke Road, Rockford, IL 61109<br>&nbsp; &nbsp; &nbsp; Phone: 815-398-8914<br></p>\n\t\t\t\t\t\t</div>\n\t\t\t\t\t\t<div mbr-buttons class=\"mbr-section-btn\" mbr-theme-style=\"display-7\" data-toolbar=\"-mbrBtnMove,-mbrBtnAdd\" mbr-if=\"showButtons\">\n\t\t\t\t\t\t\t<a href=\"#\" class=\"btn custom-btn custom-button mbr-white\">Read More</a>\n\t\t\t\t\t\t</div>\n\t\t\t\t\t</div>\n\t\t\t\t</div>\n\t\t\t</div>\n\t\t</div>\n</section>",
-          "_cid": "rM2MKUtk65",
-          "_anchor": "events3-1",
-          "_PHPplaceholders": [],
-          "_JSplaceholders": [],
+          "_name": "header1",
+          "_sourceTheme": "churchamp",
+          "_customHTML": "<section class=\"header1\" group=\"Headers\" mbr-class=\"{'mbr-fullscreen': fullScreen}\" plugins=\"amp-main\">\n    <mbr-parameters>\n    <!-- Block parameters controls (Blue \"Gear\" panel) -->\n    <header>Size</header>\n    <input type=\"checkbox\" title=\"Full Screen\" name=\"fullScreen\">\n    <input type=\"checkbox\" title=\"Full Width\" name=\"fullWidth\">\n    <input type=\"range\" inline title=\"Top\" name=\"paddingTop\" min=\"0\" max=\"15\" step=\"1\" value=\"0\" condition=\"fullScreen == false\">\n    <input type=\"range\" inline title=\"Bottom\" name=\"paddingBottom\" min=\"0\" max=\"15\" step=\"1\" value=\"6\" condition=\"fullScreen == false\">\n    <input type=\"checkbox\" name=\"halfSize\" title=\"Half Size\">\n    <select title=\"Align\" name=\"alignHalf\" condition=\"halfSize\">\n        <option value=\"1\" selected>Left</option>\n        <option value=\"2\">Center</option>\n        <option value=\"3\">Right</option>\n    </select>\n    <header>Show/Hide</header>\n    <input type=\"checkbox\" title=\"Icon\" name=\"showTitleIcon\" checked>\n    <input type=\"checkbox\" title=\"Title\" name=\"showTitle\" checked>\n    <input type=\"checkbox\" title=\"Subtitle\" name=\"showSubtitle\" checked>\n    <input type=\"checkbox\" title=\"Text\" name=\"showText\">\n    <input type=\"checkbox\" title=\"Buttons\" name=\"showButtons\">\n    <select title=\"Align\" name=\"alignTitle\" condition=\"showTitle || showSubtitle || showText || showButtons\">\n        <option value=\"1\">Left</option>\n        <option value=\"2\" selected>Center</option>\n        <option value=\"3\">Right</option>\n    </select>\n    <header>Icon</header>\n    <input type=\"range\" inline title=\"Icon Size\" name=\"iconsSize\" min=\"1\" max=\"3\" step=\"0.25\" value=\"1.5\">\n    <input type=\"color\" title=\"Icon Color\" name=\"iconColor\" value=\"#ffffff\">\n    <header>Background</header>\n    <fieldset type=\"background\" name=\"bg\" required>\n        <input type=\"image\" title=\"Background Image\" value=\"@PROJECT_PATH@/assets/images/20210404-90946-2000x1500.jpeg\" selected>\n        <input type=\"color\" title=\"Background Color\" value=\"#ffffff\">\n    </fieldset>\n    <input type=\"checkbox\" title=\"Overlay\" name=\"overlay\" condition=\"bg.type !== 'color'\" checked>\n    <input type=\"color\" title=\"Overlay Color\" name=\"overlayColor\" value=\"#ffffff\" condition=\"overlay && bg.type !== 'color'\">\n    <input type=\"range\" inline title=\"Opacity\" name=\"overlayOpacity\" min=\"0\" max=\"1\" step=\"0.1\" value=\"0.3\" condition=\"overlay && bg.type !== 'color'\">\n    <!-- End block parameters -->\n    </mbr-parameters>\n    <div class=\"mbr-overlay\" mbr-if=\"overlay && bg.type !== 'color'\"></div>\n    <div mbr-class=\"{'container':!fullWidth,\n                     'container-fluid': fullWidth}\">\n        <div class=\"mbr-row\" mbr-class=\"{'align-left': alignTitle==1,\n                        'align-center': alignTitle==2,\n                        'align-right': alignTitle==3,\n                        'mbr-jc-c':alignHalf==2,\n                        'mbr-jc-e':alignHalf==3}\" mbr-if=\"showTitle || showSubtitle || showText || showButtons\">\n            <div class=\"title-block mbr-col-sm-12 mbr-col-md-12\" mbr-class=\"{'mbr-col-lg-6': halfSize,\n                             'mbr-col-lg-12': !halfSize}\">\n                <div class=\"iconfont-wrapper\">\n                        <span mbr-icon class=\"amp-iconfont fa fa-pagelines\" mbr-class=\"mbr-section-title\" mbr-if=\"showTitleIcon\"></span>\n                </div>\n                <h1 class=\"mbr-section-title mbr-fonts-style mbr-bold mbr-white\" mbr-theme-style=\"display-1\" mbr-if=\"showTitle\" data-app-selector=\".mbr-section-title, .mbr-section-btn\">Welcome to The Brooke!</h1>\n                <h2 class=\"mbr-section-subtitle mbr-fonts-style mbr-white mbr-pt-2\" mbr-class=\"{'mbr-pt-2': showTitle}\" mbr-theme-style=\"display-4\" mbr-if=\"showSubtitle\" data-app-selector=\".mbr-section-subtitle, .mbr-section-btn\"><b>Worship Service:&nbsp; Sunday @ 10:00am<br>Office Hours:&nbsp; Mon - Thurs: 9:00am - 3:30pm<br>Closed: Friday</b></h2>\n                <p class=\"mbr-text mbr-fonts-style mbr-white\" mbr-class=\"{'mbr-pt-2': showTitle || showSubtitle}\" mbr-theme-style=\"display-7\" mbr-if=\"showText\" data-app-selector=\".mbr-section-btn, .mbr-text\">Click on the text in the block to select it and enter the text you want to show.</p>\n                <div mbr-buttons class=\"mbr-section-btn\" mbr-class=\"{'mbr-pt-4':showSubtitle||showTitle||showText}\" mbr-theme-style=\"display-7\" data-toolbar=\"-mbrBtnMove\" mbr-if=\"showButtons\">\n                    <a class=\"btn-primary btn\">Join with us</a>\n                </div>\n            </div>\n        </div>\n    </div>\n</section>",
+          "_cid": "sBXEP4DYeH",
           "_protectedParams": [],
           "_global": false,
           "_once": false,
-          "_params": {}
+          "_params": {},
+          "_anchor": "header1-7"
         },
         {
           "alias": false,
