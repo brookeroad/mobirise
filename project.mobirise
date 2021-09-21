@@ -80,41 +80,6 @@
       },
       "components": [
         {
-          "alias": false,
-          "_styles": {
-            "padding-top": "(@paddingTop * 1rem)",
-            "padding-bottom": "(@paddingBottom * 1rem)",
-            "background-color": "@bgColor",
-            ".title-line:after": {
-              "background-color": "@primaryColor"
-            },
-            ".title": {
-              "position": "relative"
-            },
-            ".custom-subtitle-bg": {
-              "top": "~\"calc(50% - 5px)\"",
-              "width": "100%",
-              "font-style": "normal",
-              "position": "absolute",
-              "color": "#404040",
-              "text-transform": "uppercase",
-              "opacity": "0.05",
-              "transform": "translateY(-50%)"
-            }
-          },
-          "_name": "content9",
-          "_sourceTheme": "churchamp",
-          "_customHTML": "<section class=\"content9\" group=\"Article\" plugins=\"amp-main\">\n    <mbr-parameters>\n    <!-- Block parameters controls (Blue \"Gear\" panel) -->\n    <header>Size</header>\n    <input type=\"range\" inline title=\"Top\" name=\"paddingTop\" min=\"0\" max=\"10\" step=\"1\" value=\"2\">\n    <input type=\"range\" inline title=\"Bottom\" name=\"paddingBottom\" min=\"0\" max=\"10\" step=\"1\" value=\"0\">\n    <header>Title</header>\n    <input type=\"checkbox\" title=\"Show Title\" name=\"showTitle\" checked>\n    <input type=\"checkbox\" title=\"Show Subtitle\" name=\"showSubtitle\">\n    <header>Align</header>\n    <select title=\"Title\" name=\"titleAlign\" condition=\"showTitle || showSubtitle\">\n        <option value=\"1\">Left</option>\n        <option value=\"2\" selected>Center</option>\n        <option value=\"3\">Right</option>\n    </select>\n    <select title=\"Text Align\" name=\"textAlign\">\n        <option value=\"1\" selected>Left</option>\n        <option value=\"2\">Center</option>\n        <option value=\"3\">Right</option>\n    </select>\n    <input type=\"color\" title=\"Background Color\" name=\"bgColor\" value=\"#ffffff\" required>\n    <!-- End block parameters -->\n    </mbr-parameters>\n    \n    <div class=\"container\">\n        <div class=\"title\" mbr-class=\"{'align-center':titleAlign==2,\n                         'align-right':titleAlign==3}\" mbr-if=\"showTitle || showSubtitle\">\n            <h3 class=\"mbr-section-title mbr-fonts-style mbr-bold section-title title-line mbr-pb-4\" mbr-theme-style=\"display-5\" mbr-if=\"showTitle\" data-app-selector=\".mbr-section-title\">PIANO ACCOMPANIST NEEDED</h3>\n            <h4 class=\"mbr-subtitle mbr-fonts-style custom-subtitle-bg mbr-bold\" mbr-theme-style=\"display-1\" mbr-if=\"showSubtitle\" data-app-selector=\".mbr-subtitle\">Become A Member</h4>\n        </div>\n        <div class=\"mbr-row mbr-pt-4\">\n            <div class=\"mbr-col-sm-12 mbr-col-md-12 mbr-col-lg-12\">\n                <p class=\"mbr-text mbr-pb-4 mbr-fonts-style\" mbr-theme-style=\"display-7\" data-app-selector=\".mbr-text\" mbr-class=\"{'align-center': textAlign == 2,\n                               'align-right': textAlign == 3}\">Job Description: \n<br>\n<br>Ministry Focus: \n<br>*Playing weekly music in person Sundays at 10am \n<br>*Accompany special music \n<br>\n<br>Occasional Duties: \n<br>*Play music for special occasions and services (Funerals, weddings, Ash Wednesday, Maundy Thursday, Good Friday, Christmas Eve, etc.) in consultation with pastor. \n<br>\n<br>Skills and Requirements: \n<br>*Ability to read music, and to communicate with people effectively \n<br>*Able to work with a minimum level of supervision \n<br>*Must have church authorized background check \n<br>\n<br>Compensation: \n<br>*$15 an hour \n<br>\n<br>Commitment: \n<br>*Five (5) hours per week \n<br>*Sunday Morning Worship; preparation as needed (church open for piano rehearsal throughout the week) \n<br>*Planning for music arrangements when not available \n<br>\n<br>Benefits: \n<br>Four weeks off each year \n<br>To apply, please send a resume to Church Administrator Lori Vowles at brookeroadumc@outlook.com. To learn more about our church, visit \n<br>www.the-brooke.org or contact Pastor Violet Johnicker with questions: \n<br>violet@the-brooke.org&nbsp;&nbsp;</p>\n                <p class=\"mbr-text mbr-pb-4 mbr-fonts-style\" mbr-theme-style=\"display-7\" data-app-selector=\".mbr-text\" mbr-class=\"{'align-center': textAlign == 2,\n                               'align-right': textAlign == 3}\"></p>\n                <p class=\"mbr-text mbr-pb-4 mbr-fonts-style\" mbr-theme-style=\"display-7\" data-app-selector=\".mbr-text\" mbr-class=\"{'align-center': textAlign == 2,\n                               'align-right': textAlign == 3}\"></p>\n            </div>\n        </div>\n    </div>\n</section>",
-          "_cid": "sBzhnbJngi",
-          "_anchor": "content9-6",
-          "_PHPplaceholders": [],
-          "_JSplaceholders": [],
-          "_protectedParams": [],
-          "_global": false,
-          "_once": false,
-          "_params": {}
-        },
-        {
           "_styles": {
             "padding-top": "(@paddingTop * 1rem)",
             "padding-bottom": "(@paddingBottom * 1rem)",
