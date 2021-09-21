@@ -56,7 +56,7 @@
       }
     ],
     "imageResize": true,
-    "uniqCompNum": 44,
+    "uniqCompNum": 45,
     "versionPublish": "5.3.0",
     "screenshot": "screenshot.png",
     "favicon": false,
@@ -246,7 +246,7 @@
           },
           "_name": "features2",
           "_sourceTheme": "churchamp",
-          "_customHTML": "<section class=\"features2\" group=\"Features\" plugins=\"amp-main\">\n\t<mbr-parameters>\n\t<!-- Block parameters controls (Blue \"Gear\" panel) -->\n\t\t<header>Size</header>\n\t\t<input type=\"checkbox\" title=\"Full Width\" name=\"fullWidth\" checked>\n\t\t<input type=\"range\" inline title=\"Top\" name=\"paddingTop\" min=\"0\" max=\"10\" step=\"1\" value=\"2\">\n\t\t<input type=\"range\" inline title=\"Bottom\" name=\"paddingBottom\" min=\"0\" max=\"10\" step=\"1\" value=\"1\">\n\t\t<!--  -->\n\t\t<header>Title</header>\n\t\t<input type=\"checkbox\" title=\"Show Cards Title\" name=\"showCardsTitle\" checked>\n\t\t<input type=\"checkbox\" title=\"Show Cards Text\" name=\"showCardsText\" checked>\n\t\t<input type=\"checkbox\" title=\"Show Cards Link\" name=\"showCardsLink\">\n\t\t<header>Cards</header>\n\t\t<input type=\"range\" inline title=\"Cards Count\" name=\"cardsAmount\" min=\"1\" max=\"4\" step=\"1\" value=\"2\" required>\n\t\t<select title=\"Align\" name=\"cardAlign\">\n\t        <option value=\"1\">Left</option>\n\t        <option value=\"2\" selected>Center</option>\n\t        <option value=\"3\">Right</option>\n    \t</select>\n    \t<input type=\"color\" title=\"Card 1 Background Color\" name=\"card1Color\" value=\"#f7c634\">\n    \t<input type=\"color\" title=\"Card 2 Background Color\" name=\"card2Color\" value=\"#e45753\">\n    \t<input type=\"color\" title=\"Card 3 Background Color\" name=\"card3Color\" value=\"#cf4a46\">\n    \t<input type=\"color\" title=\"Card 4 Background Color\" name=\"card4Color\" value=\"#dd6043\">\n\t\t<!--  -->\n\t<!-- End block parameters -->\n\t</mbr-parameters>\n\n\t<div class=\"mbr-overlay\" mbr-if=\"overlay && bg.type !== 'color'\"></div>\n\t<div mbr-class=\"{'container': !fullWidth,\n\t\t\t\t\t 'container-fluid': fullWidth}\">\n\t\t<div class=\"mbr-row mbr-jc-c\">\n\t\t\t<div class=\"mbr-col-md-6 mbr-col-sm-12 custom-card-cont\" mbr-class=\"{'mbr-col-lg-4': cardsAmount <= 3,\n\t\t\t\t \t\t\t 'mbr-col-lg-12': cardsAmount <=1,\n\t\t\t\t \t\t\t 'mbr-col-lg-6': cardsAmount <= 2,\n\t\t\t\t\t\t\t 'mbr-col-lg-3': cardsAmount > 3,\n\t\t\t\t\t\t\t 'align-center': cardAlign == 2,\n\t\t\t\t\t\t\t 'align-right': cardAlign == 3,\n                         \t 'last-child': cardsAmount==1}\">\n\t\t\t\t<div class=\"custom-card custom-card1 mbr-white\">\n\t\t\t\t\t<h3 class=\"custom-card-heading card1-title mbr-text mbr-fonts-style mbr-bold\" data-app-selector=\".card1-title\" mbr-theme-style=\"display-5\" mbr-if=\"showCardsTitle\">Brooke Road United Methodist Church<br></h3>\n\t\t\t\t\t<p class=\"custom-card-text card1-text mbr-text mbr-fonts-style\" mbr-theme-style=\"display-7\" data-app-selector=\".card1-text\" mbr-if=\"showCardsText\">1404 Brooke Road<br>Rockford, IL 61109<br>(815) 398-8914<br>email:&nbsp; brookeroadumc@outlook.com</p>\n\t\t\t\t\t<div mbr-if=\"showCardsLink\">\n\t\t\t\t\t\t<p class=\"custom-card-link mbr-fonts-style card1-link\" mbr-theme-style=\"display-7\" data-app-selector=\".card1-link\"></p>\n\t\t\t\t\t</div>\n\t\t\t\t</div>\n\t\t\t</div>\n\t\t\t<div class=\"mbr-col-md-6 mbr-col-sm-12 custom-card-cont\" mbr-class=\"{'mbr-col-lg-4': cardsAmount <= 3,\n\t\t\t\t \t\t\t 'mbr-col-lg-6': cardsAmount <= 2,\n\t\t\t\t\t\t\t 'mbr-col-lg-3': cardsAmount > 3,\n\t\t\t\t\t\t\t 'align-center': cardAlign == 2,\n\t\t\t\t\t\t\t 'align-right': cardAlign == 3,\n                         \t 'last-child': cardsAmount==2}\" mbr-if=\"cardsAmount > 1\">\n\t\t\t\t<div class=\"custom-card custom-card2 mbr-flex mbr-jc-c mbr-white\">\n\t\t\t\t\t<h3 class=\"custom-card-heading card2-title mbr-text mbr-fonts-style mbr-bold\" data-app-selector=\".card2-title\" mbr-theme-style=\"display-5\" mbr-if=\"showCardsTitle\">Worship:&nbsp; Sunday - 10:00am</h3>\n\t\t\t\t\t<p class=\"custom-card-text card2-text mbr-text mbr-fonts-style\" mbr-theme-style=\"display-4\" data-app-selector=\".card2-text\" mbr-if=\"showCardsText\"><b>Office Hours:</b><br><b>Mon - Thurs: 9:00am - 3:30PM</b><br><b>Friday: CLOSED</b></p>\n\t\t\t\t\t<div mbr-if=\"showCardsLink\">\n\t\t\t\t\t\t<p class=\"custom-card-link mbr-fonts-style card2-link\" mbr-theme-style=\"display-7\" data-app-selector=\".card2-link\">Read More</p>\n\t\t\t\t\t</div>\n\t\t\t\t</div>\n\t\t\t</div>\n\t\t\t<div class=\"mbr-col-md-6 mbr-col-sm-12 custom-card-cont\" mbr-class=\"{'mbr-col-lg-4': cardsAmount <= 3,\n\t\t\t\t \t\t\t 'mbr-col-lg-6': cardsAmount <= 2,\n\t\t\t\t\t\t\t 'mbr-col-lg-3': cardsAmount > 3,\n\t\t\t\t\t\t\t 'align-center': cardAlign == 2,\n\t\t\t\t\t\t\t 'align-right': cardAlign == 3,\n                         \t 'last-child': cardsAmount==3}\" mbr-if=\"cardsAmount > 2\">\n\t\t\t\t<div class=\"custom-card custom-card3 mbr-flex mbr-jc-c mbr-white\">\n\t\t\t\t\t<h3 class=\"custom-card-heading card3-title mbr-text mbr-fonts-style mbr-bold\" data-app-selector=\".card3-title\" mbr-theme-style=\"display-5\" mbr-if=\"showCardsTitle\">Our Mission</h3>\n\t\t\t\t\t<p class=\"custom-card-text card3-text mbr-text mbr-fonts-style\" mbr-theme-style=\"display-7\" data-app-selector=\".card3-text\" mbr-if=\"showCardsText\">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius, consequuntur, debitis. Assumenda facilis deleniti repudiandae.</p>\n\t\t\t\t\t<div mbr-if=\"showCardsLink\">\n\t\t\t\t\t\t<p class=\"custom-card-link mbr-fonts-style card3-link\" mbr-theme-style=\"display-7\" data-app-selector=\".card3-link\">Read More</p>\n\t\t\t\t\t</div>\n\t\t\t\t</div>\n\t\t\t</div>\n\t\t\t<div class=\"mbr-col-md-6 mbr-col-sm-12 custom-card-cont\" mbr-class=\"{'mbr-col-lg-4': cardsAmount <= 3,\n\t\t\t\t \t\t\t 'mbr-col-lg-6': cardsAmount <= 2,\n\t\t\t\t\t\t\t 'mbr-col-lg-3': cardsAmount > 3,\n\t\t\t\t\t\t\t 'align-center': cardAlign == 2,\n\t\t\t\t\t\t\t 'align-right': cardAlign == 3,\n                         \t 'last-child': cardsAmount==4}\" mbr-if=\"cardsAmount > 3\">\n\t\t\t\t<div class=\"custom-card custom-card4 mbr-flex mbr-jc-c mbr-white\">\n\t\t\t\t\t<h3 class=\"custom-card-heading card4-title mbr-text mbr-fonts-style mbr-bold\" data-app-selector=\".card4-title\" mbr-theme-style=\"display-5\" mbr-if=\"showCardsTitle\">Our Community</h3>\n\t\t\t\t\t<p class=\"custom-card-text card4-text mbr-text mbr-fonts-style\" mbr-theme-style=\"display-7\" data-app-selector=\".card4-text\" mbr-if=\"showCardsText\">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius, consequuntur, debitis. Assumenda facilis deleniti repudiandae.</p>\n\t\t\t\t\t<div mbr-if=\"showCardsLink\">\n\t\t\t\t\t\t<p class=\"custom-card-link mbr-fonts-style card4-link\" mbr-theme-style=\"display-7\" data-app-selector=\".card4-link\">Read More</p>\n\t\t\t\t\t</div>\n\t\t\t\t</div>\n\t\t\t</div>\t\n\t\t</div>\n\t</div>\n</section>",
+          "_customHTML": "<section class=\"features2\" group=\"Features\" plugins=\"amp-main\">\n\t<mbr-parameters>\n\t<!-- Block parameters controls (Blue \"Gear\" panel) -->\n\t\t<header>Size</header>\n\t\t<input type=\"checkbox\" title=\"Full Width\" name=\"fullWidth\" checked>\n\t\t<input type=\"range\" inline title=\"Top\" name=\"paddingTop\" min=\"0\" max=\"10\" step=\"1\" value=\"2\">\n\t\t<input type=\"range\" inline title=\"Bottom\" name=\"paddingBottom\" min=\"0\" max=\"10\" step=\"1\" value=\"1\">\n\t\t<!--  -->\n\t\t<header>Title</header>\n\t\t<input type=\"checkbox\" title=\"Show Cards Title\" name=\"showCardsTitle\" checked>\n\t\t<input type=\"checkbox\" title=\"Show Cards Text\" name=\"showCardsText\" checked>\n\t\t<input type=\"checkbox\" title=\"Show Cards Link\" name=\"showCardsLink\">\n\t\t<header>Cards</header>\n\t\t<input type=\"range\" inline title=\"Cards Count\" name=\"cardsAmount\" min=\"1\" max=\"4\" step=\"1\" value=\"2\" required>\n\t\t<select title=\"Align\" name=\"cardAlign\">\n\t        <option value=\"1\">Left</option>\n\t        <option value=\"2\" selected>Center</option>\n\t        <option value=\"3\">Right</option>\n    \t</select>\n    \t<input type=\"color\" title=\"Card 1 Background Color\" name=\"card1Color\" value=\"#ffc108\">\n    \t<input type=\"color\" title=\"Card 2 Background Color\" name=\"card2Color\" value=\"#e45753\">\n    \t<input type=\"color\" title=\"Card 3 Background Color\" name=\"card3Color\" value=\"#cf4a46\">\n    \t<input type=\"color\" title=\"Card 4 Background Color\" name=\"card4Color\" value=\"#dd6043\">\n\t\t<!--  -->\n\t<!-- End block parameters -->\n\t</mbr-parameters>\n\n\t<div class=\"mbr-overlay\" mbr-if=\"overlay && bg.type !== 'color'\"></div>\n\t<div mbr-class=\"{'container': !fullWidth,\n\t\t\t\t\t 'container-fluid': fullWidth}\">\n\t\t<div class=\"mbr-row mbr-jc-c\">\n\t\t\t<div class=\"mbr-col-md-6 mbr-col-sm-12 custom-card-cont\" mbr-class=\"{'mbr-col-lg-4': cardsAmount <= 3,\n\t\t\t\t \t\t\t 'mbr-col-lg-12': cardsAmount <=1,\n\t\t\t\t \t\t\t 'mbr-col-lg-6': cardsAmount <= 2,\n\t\t\t\t\t\t\t 'mbr-col-lg-3': cardsAmount > 3,\n\t\t\t\t\t\t\t 'align-center': cardAlign == 2,\n\t\t\t\t\t\t\t 'align-right': cardAlign == 3,\n                         \t 'last-child': cardsAmount==1}\">\n\t\t\t\t<div class=\"custom-card custom-card1 mbr-white\">\n\t\t\t\t\t<h3 class=\"custom-card-heading card1-title mbr-text mbr-fonts-style mbr-bold\" data-app-selector=\".card1-title\" mbr-theme-style=\"display-5\" mbr-if=\"showCardsTitle\">Brooke Road United Methodist Church<br></h3>\n\t\t\t\t\t<p class=\"custom-card-text card1-text mbr-text mbr-fonts-style\" mbr-theme-style=\"display-7\" data-app-selector=\".card1-text\" mbr-if=\"showCardsText\">1404 Brooke Road<br>Rockford, IL 61109<br>(815) 398-8914<br>email:&nbsp; brookeroadumc@outlook.com</p>\n\t\t\t\t\t<div mbr-if=\"showCardsLink\">\n\t\t\t\t\t\t<p class=\"custom-card-link mbr-fonts-style card1-link\" mbr-theme-style=\"display-7\" data-app-selector=\".card1-link\"></p>\n\t\t\t\t\t</div>\n\t\t\t\t</div>\n\t\t\t</div>\n\t\t\t<div class=\"mbr-col-md-6 mbr-col-sm-12 custom-card-cont\" mbr-class=\"{'mbr-col-lg-4': cardsAmount <= 3,\n\t\t\t\t \t\t\t 'mbr-col-lg-6': cardsAmount <= 2,\n\t\t\t\t\t\t\t 'mbr-col-lg-3': cardsAmount > 3,\n\t\t\t\t\t\t\t 'align-center': cardAlign == 2,\n\t\t\t\t\t\t\t 'align-right': cardAlign == 3,\n                         \t 'last-child': cardsAmount==2}\" mbr-if=\"cardsAmount > 1\">\n\t\t\t\t<div class=\"custom-card custom-card2 mbr-flex mbr-jc-c mbr-white\">\n\t\t\t\t\t<h3 class=\"custom-card-heading card2-title mbr-text mbr-fonts-style mbr-bold\" data-app-selector=\".card2-title\" mbr-theme-style=\"display-5\" mbr-if=\"showCardsTitle\">Worship:&nbsp; Sunday - 10:00am</h3>\n\t\t\t\t\t<p class=\"custom-card-text card2-text mbr-text mbr-fonts-style\" mbr-theme-style=\"display-4\" data-app-selector=\".card2-text\" mbr-if=\"showCardsText\"><b>Office Hours:</b><br><b>Mon - Thurs: 9:00am - 3:30PM</b><br><b>Friday: CLOSED</b></p>\n\t\t\t\t\t<div mbr-if=\"showCardsLink\">\n\t\t\t\t\t\t<p class=\"custom-card-link mbr-fonts-style card2-link\" mbr-theme-style=\"display-7\" data-app-selector=\".card2-link\">Read More</p>\n\t\t\t\t\t</div>\n\t\t\t\t</div>\n\t\t\t</div>\n\t\t\t<div class=\"mbr-col-md-6 mbr-col-sm-12 custom-card-cont\" mbr-class=\"{'mbr-col-lg-4': cardsAmount <= 3,\n\t\t\t\t \t\t\t 'mbr-col-lg-6': cardsAmount <= 2,\n\t\t\t\t\t\t\t 'mbr-col-lg-3': cardsAmount > 3,\n\t\t\t\t\t\t\t 'align-center': cardAlign == 2,\n\t\t\t\t\t\t\t 'align-right': cardAlign == 3,\n                         \t 'last-child': cardsAmount==3}\" mbr-if=\"cardsAmount > 2\">\n\t\t\t\t<div class=\"custom-card custom-card3 mbr-flex mbr-jc-c mbr-white\">\n\t\t\t\t\t<h3 class=\"custom-card-heading card3-title mbr-text mbr-fonts-style mbr-bold\" data-app-selector=\".card3-title\" mbr-theme-style=\"display-5\" mbr-if=\"showCardsTitle\">Our Mission</h3>\n\t\t\t\t\t<p class=\"custom-card-text card3-text mbr-text mbr-fonts-style\" mbr-theme-style=\"display-7\" data-app-selector=\".card3-text\" mbr-if=\"showCardsText\">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius, consequuntur, debitis. Assumenda facilis deleniti repudiandae.</p>\n\t\t\t\t\t<div mbr-if=\"showCardsLink\">\n\t\t\t\t\t\t<p class=\"custom-card-link mbr-fonts-style card3-link\" mbr-theme-style=\"display-7\" data-app-selector=\".card3-link\">Read More</p>\n\t\t\t\t\t</div>\n\t\t\t\t</div>\n\t\t\t</div>\n\t\t\t<div class=\"mbr-col-md-6 mbr-col-sm-12 custom-card-cont\" mbr-class=\"{'mbr-col-lg-4': cardsAmount <= 3,\n\t\t\t\t \t\t\t 'mbr-col-lg-6': cardsAmount <= 2,\n\t\t\t\t\t\t\t 'mbr-col-lg-3': cardsAmount > 3,\n\t\t\t\t\t\t\t 'align-center': cardAlign == 2,\n\t\t\t\t\t\t\t 'align-right': cardAlign == 3,\n                         \t 'last-child': cardsAmount==4}\" mbr-if=\"cardsAmount > 3\">\n\t\t\t\t<div class=\"custom-card custom-card4 mbr-flex mbr-jc-c mbr-white\">\n\t\t\t\t\t<h3 class=\"custom-card-heading card4-title mbr-text mbr-fonts-style mbr-bold\" data-app-selector=\".card4-title\" mbr-theme-style=\"display-5\" mbr-if=\"showCardsTitle\">Our Community</h3>\n\t\t\t\t\t<p class=\"custom-card-text card4-text mbr-text mbr-fonts-style\" mbr-theme-style=\"display-7\" data-app-selector=\".card4-text\" mbr-if=\"showCardsText\">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius, consequuntur, debitis. Assumenda facilis deleniti repudiandae.</p>\n\t\t\t\t\t<div mbr-if=\"showCardsLink\">\n\t\t\t\t\t\t<p class=\"custom-card-link mbr-fonts-style card4-link\" mbr-theme-style=\"display-7\" data-app-selector=\".card4-link\">Read More</p>\n\t\t\t\t\t</div>\n\t\t\t\t</div>\n\t\t\t</div>\t\n\t\t</div>\n\t</div>\n</section>",
           "_cid": "sJFqDtE2ZZ",
           "_protectedParams": [],
           "_global": false,
@@ -392,6 +392,80 @@
           "_cid": "sJFpNBuieb",
           "_protectedParams": [],
           "_global": false,
+          "_once": false,
+          "_params": {}
+        },
+        {
+          "alias": false,
+          "_styles": {
+            "padding-top": "(@paddingTop * 1rem)",
+            "padding-bottom": "(@paddingBottom * 1rem)",
+            "& when (@bg-type = 'color')": {
+              "background-color": "@bg-value"
+            },
+            "& when (@bg-type = 'image')": {
+              "background-image": "url(@bg-value)",
+              ".mbr-overlay": {
+                "background-color": "@overlayColor",
+                "opacity": "@overlayOpacity"
+              }
+            },
+            ".link-items": {
+              ".fLink": {
+                "width": "auto"
+              }
+            },
+            ".iconfont-wrapper": {
+              "margin-right": "(@iconsPadding * 0.3rem)",
+              "@media (max-width: 992px)": {
+                "margin-right": "0.3rem"
+              },
+              "height": "(@iconsSize * 0.5rem)",
+              "width": "(@iconsSize * 0.5rem)"
+            },
+            ".amp-iconfont": {
+              "font-size": "(@iconsSize * 0.5rem)",
+              "width": "(@iconsSize * 0.5rem)",
+              "color": "@primaryColor"
+            },
+            "@media (max-width: 767px)": {
+              "h3": {
+                "margin-top": "15px"
+              }
+            },
+            ".custom-footer-link": {
+              "display": "inline-block",
+              "padding-bottom": "10px",
+              "color": "@textLinkColor",
+              "transition": "0.4s",
+              "&:hover": {
+                "color": "@primaryColor"
+              }
+            },
+            ".custom-footer-heading": {
+              "margin-bottom": "35px"
+            },
+            ".custom-footer-list-item": {
+              "min-width": "180px"
+            },
+            ".custom-footer-text": {
+              "display": "inline-block",
+              "padding-bottom": "10px",
+              "color": "@textLinkColor"
+            },
+            ".list-colums": {
+              "column-count": "2",
+              "-moz-column-count": "2",
+              "-webkit-column-count": "2"
+            }
+          },
+          "_name": "footer2",
+          "_sourceTheme": "churchamp",
+          "_customHTML": "<section class=\"footer2\" group=\"Footers\" plugins=\"amp-main\" global>\n    <mbr-parameters>\n    <!-- Block parameters controls (Blue \"Gear\" panel) -->\n    <header>Size</header>\n    <!--  -->\n    <input type=\"checkbox\" title=\"Full Width\" name=\"fullWidth\" checked>\n    <input type=\"range\" inline title=\"Top\" name=\"paddingTop\" min=\"0\" max=\"10\" step=\"1\" value=\"4\">\n    <input type=\"range\" inline title=\"Bottom\" name=\"paddingBottom\" min=\"0\" max=\"10\" step=\"1\" value=\"2\">\n    <!--  -->\n    <header>Text/Link Color</header>\n    <input type=\"color\" title=\"Text/Link Color\" name=\"textLinkColor\" value=\"#cdcdcd\">\n    <header>Icons</header>\n    <input type=\"checkbox\" title=\"Show Icons\" name=\"showIcons\" checked>\n    <input type=\"range\" inline title=\"Icons Size\" name=\"iconsSize\" min=\"1\" max=\"3\" step=\"0.25\" value=\"2\">\n    <input type=\"range\" inline title=\"Icons Padding\" name=\"iconsPadding\" min=\"0.5\" max=\"3\" step=\"0.25\" value=\"0.5\">\n    <header>Links Counter</header>\n    <input type=\"range\" inline title=\"Links Count\" name=\"linksCount\" min=\"0\" max=\"8\" step=\"1\" value=\"8\">\n    <!--  -->\n    <header>Background</header>\n    <fieldset type=\"background\" name=\"bg\">\n        <input type=\"image\" title=\"Background Image\" value=\"../_images/background4.jpg\">\n        <input type=\"color\" title=\"Background Color\" value=\"#1B2125\" selected>\n    </fieldset>\n    <!--  -->\n    <input type=\"checkbox\" title=\"Overlay\" name=\"overlay\" checked condition=\"bg.type!='color'\">\n    <input type=\"color\" title=\"Overlay Color\" name=\"overlayColor\" value=\"#000000\" condition=\"bg.type!='color' && overlay\">\n    <input type=\"range\" inline title=\"Overlay Opacity\" name=\"overlayOpacity\" min=\"0\" max=\"1\" step=\"0.1\" value=\"0.4\" condition=\"bg.type!='color' && overlay\">\n    <!-- End block parameters -->\n    </mbr-parameters>\n    <div class=\"mbr-overlay\" mbr-if=\"overlay && bg.type !== 'color'\"></div>\n    <div class=\"footer-container\" mbr-class=\"{'container': !fullWidth,\n                     'container-fluid': fullWidth}\">\n        <div class=\"mbr-row\">\n            <div class=\"mbr-col-sm-12 mbr-col-md-6 mbr-col-lg-4 mbr-flex mbr-jc-c\">\n                <amp-img src=\"@PROJECT_PATH@/assets/images/brooke-road-umc-logo-500x500.png\" width=\"138.46153846153848\" height=\"90\" alt=\"image\" class=\"mobirise-loader mobirise-loader\">\n                    <div placeholder class=\"placeholder\"></div>\n                    <img class=\"mbr-temp\" src=\"@PROJECT_PATH@/assets/images/brooke-road-umc-logo-500x500.png\" alt>\n                </amp-img>\n            </div>\n            <div class=\"mbr-col-sm-12 mbr-col-md-6 mbr-col-lg-4\">\n                <h3 class=\"custom-footer-heading mbr-fonts-style mbr-white\" mbr-theme-style=\"display-5\" data-app-selector=\".custom-footer-heading\">Contact Us</h3>\n                <div class=\"custom-footer-list\">\n                    <div>\n                        <div class=\"iconfont-wrapper\" mbr-if=\"showIcons\">\n                            <span mbr-icon class=\"amp-iconfont fa fa-map-marker\"></span>\n                        </div>\n                        <p class=\"custom-footer-text mbr-fonts-style\" mbr-theme-style=\"display-4\">Brooke Road UMC</p>\n                    </div>\n                    <div>\n                        <div class=\"iconfont-wrapper\" mbr-if=\"showIcons\">\n                            <span mbr-icon class=\"amp-iconfont fa fa-phone\"></span>\n                        </div>\n                        <p class=\"custom-footer-text mbr-fonts-style\" mbr-theme-style=\"display-4\">(815) 398-8914</p>\n                    </div>\n                    <div>\n                        <div class=\"iconfont-wrapper\" mbr-if=\"showIcons\">\n                            <span mbr-icon class=\"amp-iconfont fa fa-envelope\"></span>\n                        </div>\n                        <p class=\"custom-footer-link mbr-fonts-style\" mbr-theme-style=\"display-4\">brookeroadumc@outlook.com</p>\n                    </div>\n                    <div>\n                        <div class=\"iconfont-wrapper\" mbr-if=\"showIcons\">\n                            <span mbr-icon class=\"amp-iconfont fa fa-globe\"></span>\n                        </div>\n                        <p class=\"custom-footer-link mbr-fonts-style\" mbr-theme-style=\"display-4\">www.the-brooke.org</p>\n                    </div>\n                </div>\n            </div>\n            <div class=\"mbr-col-sm-12 mbr-col-md-6 mbr-col-lg-4\">\n                <h3 class=\"custom-footer-heading mbr-fonts-style mbr-white\" mbr-theme-style=\"display-5\" data-app-selector=\".custom-footer-heading\">Useful Links</h3>\n                <div class=\"custom-footer-list list-colums\" mbr-list mbr-list-grow=\"linksCount\">\n                    <div class=\"custom-footer-list-item\">\n                        <div class=\"iconfont-wrapper\">\n                            <span mbr-icon class=\"amp-iconfont fa fa-angle-right\"></span>\n                        </div>\n                        <p class=\"custom-footer-link mbr-fonts-style\" mbr-theme-style=\"display-7\">Link</p>\n                    </div>\n                    <div class=\"custom-footer-list-item\">\n                        <div class=\"iconfont-wrapper\">\n                            <span mbr-icon class=\"amp-iconfont fa fa-angle-right\"></span>\n                        </div>\n                        <p class=\"custom-footer-link mbr-fonts-style\" mbr-theme-style=\"display-7\">Link</p>\n                    </div>\n                    <div class=\"custom-footer-list-item\">\n                        <div class=\"iconfont-wrapper\">\n                            <span mbr-icon class=\"amp-iconfont fa fa-angle-right\"></span>\n                        </div>\n                        <p class=\"custom-footer-link mbr-fonts-style\" mbr-theme-style=\"display-7\">Link</p>\n                    </div>\n                    <div class=\"custom-footer-list-item\">\n                        <div class=\"iconfont-wrapper\">\n                            <span mbr-icon class=\"amp-iconfont fa fa-angle-right\"></span>\n                        </div>\n                        <p class=\"custom-footer-link mbr-fonts-style\" mbr-theme-style=\"display-7\">Link</p>\n                    </div>\n                    <div class=\"custom-footer-list-item\">\n                        <div class=\"iconfont-wrapper\">\n                            <span mbr-icon class=\"amp-iconfont fa fa-angle-right\"></span>\n                        </div>\n                        <p class=\"custom-footer-link mbr-fonts-style\" mbr-theme-style=\"display-7\">Link</p>\n                    </div>\n                    <div class=\"custom-footer-list-item\">\n                        <div class=\"iconfont-wrapper\">\n                            <span mbr-icon class=\"amp-iconfont fa fa-angle-right\"></span>\n                        </div>\n                        <p class=\"custom-footer-link mbr-fonts-style\" mbr-theme-style=\"display-7\">Link</p>\n                    </div>\n                    <div class=\"custom-footer-list-item\">\n                        <div class=\"iconfont-wrapper\">\n                            <span mbr-icon class=\"amp-iconfont fa fa-angle-right\"></span>\n                        </div>\n                        <p class=\"custom-footer-link mbr-fonts-style\" mbr-theme-style=\"display-7\">Link</p>\n                    </div>\n                    <div class=\"custom-footer-list-item\">\n                        <div class=\"iconfont-wrapper\">\n                            <span mbr-icon class=\"amp-iconfont fa fa-angle-right\"></span>\n                        </div>\n                        <p class=\"custom-footer-link mbr-fonts-style\" mbr-theme-style=\"display-7\">Link</p>\n                    </div>\n                </div>\n            </div>\n        </div>\n    </div>\n</section>",
+          "_cid": "sJFuwst1pL",
+          "_anchor": "footer2-18",
+          "_protectedParams": [],
+          "_global": true,
           "_once": false,
           "_params": {}
         }
@@ -941,6 +1015,80 @@
           "_global": true,
           "_once": "menu",
           "_params": {}
+        },
+        {
+          "alias": false,
+          "_styles": {
+            "padding-top": "(@paddingTop * 1rem)",
+            "padding-bottom": "(@paddingBottom * 1rem)",
+            "& when (@bg-type = 'color')": {
+              "background-color": "@bg-value"
+            },
+            "& when (@bg-type = 'image')": {
+              "background-image": "url(@bg-value)",
+              ".mbr-overlay": {
+                "background-color": "@overlayColor",
+                "opacity": "@overlayOpacity"
+              }
+            },
+            ".link-items": {
+              ".fLink": {
+                "width": "auto"
+              }
+            },
+            ".iconfont-wrapper": {
+              "margin-right": "(@iconsPadding * 0.3rem)",
+              "@media (max-width: 992px)": {
+                "margin-right": "0.3rem"
+              },
+              "height": "(@iconsSize * 0.5rem)",
+              "width": "(@iconsSize * 0.5rem)"
+            },
+            ".amp-iconfont": {
+              "font-size": "(@iconsSize * 0.5rem)",
+              "width": "(@iconsSize * 0.5rem)",
+              "color": "@primaryColor"
+            },
+            "@media (max-width: 767px)": {
+              "h3": {
+                "margin-top": "15px"
+              }
+            },
+            ".custom-footer-link": {
+              "display": "inline-block",
+              "padding-bottom": "10px",
+              "color": "@textLinkColor",
+              "transition": "0.4s",
+              "&:hover": {
+                "color": "@primaryColor"
+              }
+            },
+            ".custom-footer-heading": {
+              "margin-bottom": "35px"
+            },
+            ".custom-footer-list-item": {
+              "min-width": "180px"
+            },
+            ".custom-footer-text": {
+              "display": "inline-block",
+              "padding-bottom": "10px",
+              "color": "@textLinkColor"
+            },
+            ".list-colums": {
+              "column-count": "2",
+              "-moz-column-count": "2",
+              "-webkit-column-count": "2"
+            }
+          },
+          "_name": "footer2",
+          "_sourceTheme": "churchamp",
+          "_customHTML": "<section class=\"footer2\" group=\"Footers\" plugins=\"amp-main\" global>\n    <mbr-parameters>\n    <!-- Block parameters controls (Blue \"Gear\" panel) -->\n    <header>Size</header>\n    <!--  -->\n    <input type=\"checkbox\" title=\"Full Width\" name=\"fullWidth\" checked>\n    <input type=\"range\" inline title=\"Top\" name=\"paddingTop\" min=\"0\" max=\"10\" step=\"1\" value=\"4\">\n    <input type=\"range\" inline title=\"Bottom\" name=\"paddingBottom\" min=\"0\" max=\"10\" step=\"1\" value=\"2\">\n    <!--  -->\n    <header>Text/Link Color</header>\n    <input type=\"color\" title=\"Text/Link Color\" name=\"textLinkColor\" value=\"#cdcdcd\">\n    <header>Icons</header>\n    <input type=\"checkbox\" title=\"Show Icons\" name=\"showIcons\" checked>\n    <input type=\"range\" inline title=\"Icons Size\" name=\"iconsSize\" min=\"1\" max=\"3\" step=\"0.25\" value=\"2\">\n    <input type=\"range\" inline title=\"Icons Padding\" name=\"iconsPadding\" min=\"0.5\" max=\"3\" step=\"0.25\" value=\"0.5\">\n    <header>Links Counter</header>\n    <input type=\"range\" inline title=\"Links Count\" name=\"linksCount\" min=\"0\" max=\"8\" step=\"1\" value=\"8\">\n    <!--  -->\n    <header>Background</header>\n    <fieldset type=\"background\" name=\"bg\">\n        <input type=\"image\" title=\"Background Image\" value=\"../_images/background4.jpg\">\n        <input type=\"color\" title=\"Background Color\" value=\"#1B2125\" selected>\n    </fieldset>\n    <!--  -->\n    <input type=\"checkbox\" title=\"Overlay\" name=\"overlay\" checked condition=\"bg.type!='color'\">\n    <input type=\"color\" title=\"Overlay Color\" name=\"overlayColor\" value=\"#000000\" condition=\"bg.type!='color' && overlay\">\n    <input type=\"range\" inline title=\"Overlay Opacity\" name=\"overlayOpacity\" min=\"0\" max=\"1\" step=\"0.1\" value=\"0.4\" condition=\"bg.type!='color' && overlay\">\n    <!-- End block parameters -->\n    </mbr-parameters>\n    <div class=\"mbr-overlay\" mbr-if=\"overlay && bg.type !== 'color'\"></div>\n    <div class=\"footer-container\" mbr-class=\"{'container': !fullWidth,\n                     'container-fluid': fullWidth}\">\n        <div class=\"mbr-row\">\n            <div class=\"mbr-col-sm-12 mbr-col-md-6 mbr-col-lg-4 mbr-flex mbr-jc-c\">\n                <amp-img src=\"@PROJECT_PATH@/assets/images/brooke-road-umc-logo-500x500.png\" width=\"138.46153846153848\" height=\"90\" alt=\"image\" class=\"mobirise-loader mobirise-loader\">\n                    <div placeholder class=\"placeholder\"></div>\n                    <img class=\"mbr-temp\" src=\"@PROJECT_PATH@/assets/images/brooke-road-umc-logo-500x500.png\" alt>\n                </amp-img>\n            </div>\n            <div class=\"mbr-col-sm-12 mbr-col-md-6 mbr-col-lg-4\">\n                <h3 class=\"custom-footer-heading mbr-fonts-style mbr-white\" mbr-theme-style=\"display-5\" data-app-selector=\".custom-footer-heading\">Contact Us</h3>\n                <div class=\"custom-footer-list\">\n                    <div>\n                        <div class=\"iconfont-wrapper\" mbr-if=\"showIcons\">\n                            <span mbr-icon class=\"amp-iconfont fa fa-map-marker\"></span>\n                        </div>\n                        <p class=\"custom-footer-text mbr-fonts-style\" mbr-theme-style=\"display-4\">Brooke Road UMC</p>\n                    </div>\n                    <div>\n                        <div class=\"iconfont-wrapper\" mbr-if=\"showIcons\">\n                            <span mbr-icon class=\"amp-iconfont fa fa-phone\"></span>\n                        </div>\n                        <p class=\"custom-footer-text mbr-fonts-style\" mbr-theme-style=\"display-4\">(815) 398-8914</p>\n                    </div>\n                    <div>\n                        <div class=\"iconfont-wrapper\" mbr-if=\"showIcons\">\n                            <span mbr-icon class=\"amp-iconfont fa fa-envelope\"></span>\n                        </div>\n                        <p class=\"custom-footer-link mbr-fonts-style\" mbr-theme-style=\"display-4\">brookeroadumc@outlook.com</p>\n                    </div>\n                    <div>\n                        <div class=\"iconfont-wrapper\" mbr-if=\"showIcons\">\n                            <span mbr-icon class=\"amp-iconfont fa fa-globe\"></span>\n                        </div>\n                        <p class=\"custom-footer-link mbr-fonts-style\" mbr-theme-style=\"display-4\">www.the-brooke.org</p>\n                    </div>\n                </div>\n            </div>\n            <div class=\"mbr-col-sm-12 mbr-col-md-6 mbr-col-lg-4\">\n                <h3 class=\"custom-footer-heading mbr-fonts-style mbr-white\" mbr-theme-style=\"display-5\" data-app-selector=\".custom-footer-heading\">Useful Links</h3>\n                <div class=\"custom-footer-list list-colums\" mbr-list mbr-list-grow=\"linksCount\">\n                    <div class=\"custom-footer-list-item\">\n                        <div class=\"iconfont-wrapper\">\n                            <span mbr-icon class=\"amp-iconfont fa fa-angle-right\"></span>\n                        </div>\n                        <p class=\"custom-footer-link mbr-fonts-style\" mbr-theme-style=\"display-7\">Link</p>\n                    </div>\n                    <div class=\"custom-footer-list-item\">\n                        <div class=\"iconfont-wrapper\">\n                            <span mbr-icon class=\"amp-iconfont fa fa-angle-right\"></span>\n                        </div>\n                        <p class=\"custom-footer-link mbr-fonts-style\" mbr-theme-style=\"display-7\">Link</p>\n                    </div>\n                    <div class=\"custom-footer-list-item\">\n                        <div class=\"iconfont-wrapper\">\n                            <span mbr-icon class=\"amp-iconfont fa fa-angle-right\"></span>\n                        </div>\n                        <p class=\"custom-footer-link mbr-fonts-style\" mbr-theme-style=\"display-7\">Link</p>\n                    </div>\n                    <div class=\"custom-footer-list-item\">\n                        <div class=\"iconfont-wrapper\">\n                            <span mbr-icon class=\"amp-iconfont fa fa-angle-right\"></span>\n                        </div>\n                        <p class=\"custom-footer-link mbr-fonts-style\" mbr-theme-style=\"display-7\">Link</p>\n                    </div>\n                    <div class=\"custom-footer-list-item\">\n                        <div class=\"iconfont-wrapper\">\n                            <span mbr-icon class=\"amp-iconfont fa fa-angle-right\"></span>\n                        </div>\n                        <p class=\"custom-footer-link mbr-fonts-style\" mbr-theme-style=\"display-7\">Link</p>\n                    </div>\n                    <div class=\"custom-footer-list-item\">\n                        <div class=\"iconfont-wrapper\">\n                            <span mbr-icon class=\"amp-iconfont fa fa-angle-right\"></span>\n                        </div>\n                        <p class=\"custom-footer-link mbr-fonts-style\" mbr-theme-style=\"display-7\">Link</p>\n                    </div>\n                    <div class=\"custom-footer-list-item\">\n                        <div class=\"iconfont-wrapper\">\n                            <span mbr-icon class=\"amp-iconfont fa fa-angle-right\"></span>\n                        </div>\n                        <p class=\"custom-footer-link mbr-fonts-style\" mbr-theme-style=\"display-7\">Link</p>\n                    </div>\n                    <div class=\"custom-footer-list-item\">\n                        <div class=\"iconfont-wrapper\">\n                            <span mbr-icon class=\"amp-iconfont fa fa-angle-right\"></span>\n                        </div>\n                        <p class=\"custom-footer-link mbr-fonts-style\" mbr-theme-style=\"display-7\">Link</p>\n                    </div>\n                </div>\n            </div>\n        </div>\n    </div>\n</section>",
+          "_cid": "sJFuwst1pL",
+          "_anchor": "footer2-18",
+          "_protectedParams": [],
+          "_global": true,
+          "_once": false,
+          "_params": {}
         }
       ]
     },
@@ -1400,6 +1548,80 @@
           "_protectedParams": [],
           "_global": true,
           "_once": "menu",
+          "_params": {}
+        },
+        {
+          "alias": false,
+          "_styles": {
+            "padding-top": "(@paddingTop * 1rem)",
+            "padding-bottom": "(@paddingBottom * 1rem)",
+            "& when (@bg-type = 'color')": {
+              "background-color": "@bg-value"
+            },
+            "& when (@bg-type = 'image')": {
+              "background-image": "url(@bg-value)",
+              ".mbr-overlay": {
+                "background-color": "@overlayColor",
+                "opacity": "@overlayOpacity"
+              }
+            },
+            ".link-items": {
+              ".fLink": {
+                "width": "auto"
+              }
+            },
+            ".iconfont-wrapper": {
+              "margin-right": "(@iconsPadding * 0.3rem)",
+              "@media (max-width: 992px)": {
+                "margin-right": "0.3rem"
+              },
+              "height": "(@iconsSize * 0.5rem)",
+              "width": "(@iconsSize * 0.5rem)"
+            },
+            ".amp-iconfont": {
+              "font-size": "(@iconsSize * 0.5rem)",
+              "width": "(@iconsSize * 0.5rem)",
+              "color": "@primaryColor"
+            },
+            "@media (max-width: 767px)": {
+              "h3": {
+                "margin-top": "15px"
+              }
+            },
+            ".custom-footer-link": {
+              "display": "inline-block",
+              "padding-bottom": "10px",
+              "color": "@textLinkColor",
+              "transition": "0.4s",
+              "&:hover": {
+                "color": "@primaryColor"
+              }
+            },
+            ".custom-footer-heading": {
+              "margin-bottom": "35px"
+            },
+            ".custom-footer-list-item": {
+              "min-width": "180px"
+            },
+            ".custom-footer-text": {
+              "display": "inline-block",
+              "padding-bottom": "10px",
+              "color": "@textLinkColor"
+            },
+            ".list-colums": {
+              "column-count": "2",
+              "-moz-column-count": "2",
+              "-webkit-column-count": "2"
+            }
+          },
+          "_name": "footer2",
+          "_sourceTheme": "churchamp",
+          "_customHTML": "<section class=\"footer2\" group=\"Footers\" plugins=\"amp-main\" global>\n    <mbr-parameters>\n    <!-- Block parameters controls (Blue \"Gear\" panel) -->\n    <header>Size</header>\n    <!--  -->\n    <input type=\"checkbox\" title=\"Full Width\" name=\"fullWidth\" checked>\n    <input type=\"range\" inline title=\"Top\" name=\"paddingTop\" min=\"0\" max=\"10\" step=\"1\" value=\"4\">\n    <input type=\"range\" inline title=\"Bottom\" name=\"paddingBottom\" min=\"0\" max=\"10\" step=\"1\" value=\"2\">\n    <!--  -->\n    <header>Text/Link Color</header>\n    <input type=\"color\" title=\"Text/Link Color\" name=\"textLinkColor\" value=\"#cdcdcd\">\n    <header>Icons</header>\n    <input type=\"checkbox\" title=\"Show Icons\" name=\"showIcons\" checked>\n    <input type=\"range\" inline title=\"Icons Size\" name=\"iconsSize\" min=\"1\" max=\"3\" step=\"0.25\" value=\"2\">\n    <input type=\"range\" inline title=\"Icons Padding\" name=\"iconsPadding\" min=\"0.5\" max=\"3\" step=\"0.25\" value=\"0.5\">\n    <header>Links Counter</header>\n    <input type=\"range\" inline title=\"Links Count\" name=\"linksCount\" min=\"0\" max=\"8\" step=\"1\" value=\"8\">\n    <!--  -->\n    <header>Background</header>\n    <fieldset type=\"background\" name=\"bg\">\n        <input type=\"image\" title=\"Background Image\" value=\"../_images/background4.jpg\">\n        <input type=\"color\" title=\"Background Color\" value=\"#1B2125\" selected>\n    </fieldset>\n    <!--  -->\n    <input type=\"checkbox\" title=\"Overlay\" name=\"overlay\" checked condition=\"bg.type!='color'\">\n    <input type=\"color\" title=\"Overlay Color\" name=\"overlayColor\" value=\"#000000\" condition=\"bg.type!='color' && overlay\">\n    <input type=\"range\" inline title=\"Overlay Opacity\" name=\"overlayOpacity\" min=\"0\" max=\"1\" step=\"0.1\" value=\"0.4\" condition=\"bg.type!='color' && overlay\">\n    <!-- End block parameters -->\n    </mbr-parameters>\n    <div class=\"mbr-overlay\" mbr-if=\"overlay && bg.type !== 'color'\"></div>\n    <div class=\"footer-container\" mbr-class=\"{'container': !fullWidth,\n                     'container-fluid': fullWidth}\">\n        <div class=\"mbr-row\">\n            <div class=\"mbr-col-sm-12 mbr-col-md-6 mbr-col-lg-4 mbr-flex mbr-jc-c\">\n                <amp-img src=\"@PROJECT_PATH@/assets/images/brooke-road-umc-logo-500x500.png\" width=\"138.46153846153848\" height=\"90\" alt=\"image\" class=\"mobirise-loader mobirise-loader\">\n                    <div placeholder class=\"placeholder\"></div>\n                    <img class=\"mbr-temp\" src=\"@PROJECT_PATH@/assets/images/brooke-road-umc-logo-500x500.png\" alt>\n                </amp-img>\n            </div>\n            <div class=\"mbr-col-sm-12 mbr-col-md-6 mbr-col-lg-4\">\n                <h3 class=\"custom-footer-heading mbr-fonts-style mbr-white\" mbr-theme-style=\"display-5\" data-app-selector=\".custom-footer-heading\">Contact Us</h3>\n                <div class=\"custom-footer-list\">\n                    <div>\n                        <div class=\"iconfont-wrapper\" mbr-if=\"showIcons\">\n                            <span mbr-icon class=\"amp-iconfont fa fa-map-marker\"></span>\n                        </div>\n                        <p class=\"custom-footer-text mbr-fonts-style\" mbr-theme-style=\"display-4\">Brooke Road UMC</p>\n                    </div>\n                    <div>\n                        <div class=\"iconfont-wrapper\" mbr-if=\"showIcons\">\n                            <span mbr-icon class=\"amp-iconfont fa fa-phone\"></span>\n                        </div>\n                        <p class=\"custom-footer-text mbr-fonts-style\" mbr-theme-style=\"display-4\">(815) 398-8914</p>\n                    </div>\n                    <div>\n                        <div class=\"iconfont-wrapper\" mbr-if=\"showIcons\">\n                            <span mbr-icon class=\"amp-iconfont fa fa-envelope\"></span>\n                        </div>\n                        <p class=\"custom-footer-link mbr-fonts-style\" mbr-theme-style=\"display-4\">brookeroadumc@outlook.com</p>\n                    </div>\n                    <div>\n                        <div class=\"iconfont-wrapper\" mbr-if=\"showIcons\">\n                            <span mbr-icon class=\"amp-iconfont fa fa-globe\"></span>\n                        </div>\n                        <p class=\"custom-footer-link mbr-fonts-style\" mbr-theme-style=\"display-4\">www.the-brooke.org</p>\n                    </div>\n                </div>\n            </div>\n            <div class=\"mbr-col-sm-12 mbr-col-md-6 mbr-col-lg-4\">\n                <h3 class=\"custom-footer-heading mbr-fonts-style mbr-white\" mbr-theme-style=\"display-5\" data-app-selector=\".custom-footer-heading\">Useful Links</h3>\n                <div class=\"custom-footer-list list-colums\" mbr-list mbr-list-grow=\"linksCount\">\n                    <div class=\"custom-footer-list-item\">\n                        <div class=\"iconfont-wrapper\">\n                            <span mbr-icon class=\"amp-iconfont fa fa-angle-right\"></span>\n                        </div>\n                        <p class=\"custom-footer-link mbr-fonts-style\" mbr-theme-style=\"display-7\">Link</p>\n                    </div>\n                    <div class=\"custom-footer-list-item\">\n                        <div class=\"iconfont-wrapper\">\n                            <span mbr-icon class=\"amp-iconfont fa fa-angle-right\"></span>\n                        </div>\n                        <p class=\"custom-footer-link mbr-fonts-style\" mbr-theme-style=\"display-7\">Link</p>\n                    </div>\n                    <div class=\"custom-footer-list-item\">\n                        <div class=\"iconfont-wrapper\">\n                            <span mbr-icon class=\"amp-iconfont fa fa-angle-right\"></span>\n                        </div>\n                        <p class=\"custom-footer-link mbr-fonts-style\" mbr-theme-style=\"display-7\">Link</p>\n                    </div>\n                    <div class=\"custom-footer-list-item\">\n                        <div class=\"iconfont-wrapper\">\n                            <span mbr-icon class=\"amp-iconfont fa fa-angle-right\"></span>\n                        </div>\n                        <p class=\"custom-footer-link mbr-fonts-style\" mbr-theme-style=\"display-7\">Link</p>\n                    </div>\n                    <div class=\"custom-footer-list-item\">\n                        <div class=\"iconfont-wrapper\">\n                            <span mbr-icon class=\"amp-iconfont fa fa-angle-right\"></span>\n                        </div>\n                        <p class=\"custom-footer-link mbr-fonts-style\" mbr-theme-style=\"display-7\">Link</p>\n                    </div>\n                    <div class=\"custom-footer-list-item\">\n                        <div class=\"iconfont-wrapper\">\n                            <span mbr-icon class=\"amp-iconfont fa fa-angle-right\"></span>\n                        </div>\n                        <p class=\"custom-footer-link mbr-fonts-style\" mbr-theme-style=\"display-7\">Link</p>\n                    </div>\n                    <div class=\"custom-footer-list-item\">\n                        <div class=\"iconfont-wrapper\">\n                            <span mbr-icon class=\"amp-iconfont fa fa-angle-right\"></span>\n                        </div>\n                        <p class=\"custom-footer-link mbr-fonts-style\" mbr-theme-style=\"display-7\">Link</p>\n                    </div>\n                    <div class=\"custom-footer-list-item\">\n                        <div class=\"iconfont-wrapper\">\n                            <span mbr-icon class=\"amp-iconfont fa fa-angle-right\"></span>\n                        </div>\n                        <p class=\"custom-footer-link mbr-fonts-style\" mbr-theme-style=\"display-7\">Link</p>\n                    </div>\n                </div>\n            </div>\n        </div>\n    </div>\n</section>",
+          "_cid": "sJFuwst1pL",
+          "_anchor": "footer2-18",
+          "_protectedParams": [],
+          "_global": true,
+          "_once": false,
           "_params": {}
         }
       ]
