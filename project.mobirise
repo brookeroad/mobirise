@@ -55,7 +55,7 @@
       }
     ],
     "imageResize": true,
-    "uniqCompNum": 40,
+    "uniqCompNum": 42,
     "versionPublish": "5.3.0",
     "screenshot": "screenshot.png",
     "favicon": false,
@@ -79,63 +79,6 @@
         "html_before": ""
       },
       "components": [
-        {
-          "alias": false,
-          "_styles": {
-            "padding-top": "(@paddingTop * 1rem)",
-            "padding-bottom": "(@paddingBottom * 1rem)",
-            "& when (@bg-type = 'color')": {
-              "background-color": "@bg-value"
-            },
-            "& when (@bg-type = 'image')": {
-              "background-image": "url(@bg-value)",
-              ".mbr-overlay": {
-                "background-color": "@overlayColor",
-                "opacity": "@overlayOpacity"
-              }
-            },
-            ".link-items": {
-              ".fLink": {
-                "width": "auto"
-              }
-            },
-            ".iconfont-wrapper": {
-              "margin-right": "(@iconsPadding * 1rem)",
-              "@media (max-width: 992px)": {
-                "margin-right": "0.5rem"
-              },
-              "height": "(@iconsSize * 1rem)",
-              "width": "(@iconsSize * 1rem)"
-            },
-            ".amp-iconfont": {
-              "font-size": "(@iconsSize * 1rem)",
-              "width": "(@iconsSize * 1rem)",
-              "color": "@primaryColor"
-            },
-            ".custom-copyr-span": {
-              "color": "@primaryColor"
-            },
-            ".mbr-jc-b": {
-              "@media (max-width: 767px)": {
-                "justify-content": "center"
-              }
-            },
-            ".icons-list": {
-              "@media (max-width: 767px)": {
-                "margin-top": "15px"
-              }
-            }
-          },
-          "_name": "footer1",
-          "_sourceTheme": "churchamp",
-          "_customHTML": "<section class=\"footer1\" group=\"Footers\" plugins=\"amp-main\" global>\n    <mbr-parameters>\n    <!-- Block parameters controls (Blue \"Gear\" panel) -->\n    <header>Size</header>\n    <!--  -->\n    <input type=\"checkbox\" title=\"Reverse Content\" name=\"reverseContent\" condition=\"showCopyright\">\n    <input type=\"checkbox\" title=\"Full Width\" name=\"fullWidth\" checked>\n    <input type=\"range\" inline title=\"Top\" name=\"paddingTop\" min=\"0\" max=\"10\" step=\"1\" value=\"2\">\n    <input type=\"range\" inline title=\"Bottom\" name=\"paddingBottom\" min=\"0\" max=\"10\" step=\"1\" value=\"2\">\n    <!--  -->\n    <header>Show/Hide</header>\n    <input type=\"checkbox\" title=\"Copyright\" name=\"showCopyright\" checked>\n    <input type=\"checkbox\" title=\"Icons\" name=\"showIcons\" checked>\n    <!--  -->\n    <header>Icons</header>\n    <input type=\"range\" inline title=\"Icons Size\" name=\"iconsSize\" min=\"1\" max=\"3\" step=\"0.25\" value=\"2\">\n    <input type=\"range\" inline title=\"Icons Padding\" name=\"iconsPadding\" min=\"0.5\" max=\"3\" step=\"0.25\" value=\"1\">\n    <select title=\"Position\" name=\"flexContent\">\n        <option value=\"1\">Left</option>\n        <option value=\"2\" selected>Center</option>\n        <option value=\"3\">Right</option>\n    </select>\n    <input type=\"range\" inline title=\"Icons Count\" name=\"iconsCount\" min=\"1\" max=\"10\" value=\"5\" step=\"1\" required>\n    <!--  -->\n    <header>Background</header>\n    <fieldset type=\"background\" name=\"bg\">\n        <input type=\"image\" title=\"Background Image\" value=\"../_images/background4.jpg\">\n        <input type=\"color\" title=\"Background Color\" value=\"#171C1F\" selected>\n    </fieldset>\n    <!--  -->\n    <input type=\"checkbox\" title=\"Overlay\" name=\"overlay\" checked condition=\"bg.type!='color'\">\n    <input type=\"color\" title=\"Overlay Color\" name=\"overlayColor\" value=\"#000000\" condition=\"bg.type!='color' && overlay\">\n    <input type=\"range\" inline title=\"Overlay Opacity\" name=\"overlayOpacity\" min=\"0\" max=\"1\" step=\"0.1\" value=\"0.4\" condition=\"bg.type!='color' && overlay\">\n    <!-- End block parameters -->\n    </mbr-parameters>\n    <div class=\"mbr-overlay\" mbr-if=\"overlay && bg.type !== 'color'\"></div>\n    <div class=\"footer-container\" mbr-class=\"{'container': !fullWidth,\n                     'container-fluid': fullWidth}\">\n        <div class=\"mbr-row\" mbr-class=\"{'mbr-row-reverse': reverseContent}\">\n            <div class=\"mbr-col-sm-12 mbr-col-md-6 mbr-col-lg-6\">\n                <div class=\"copyright mbr-px-2 mbr-flex mbr-jc-c\" mbr-if=\"showCopyright\">\n                    <p class=\"mbr-text mbr-fonts-style mbr-white align-center custom-copyr-text\" mbr-theme-style=\"display-7\" data-app-selector=\".copyright .mbr-text\" data-app-placeholder=\"Type Text\">© Copyright 2021&nbsp;<span class=\"custom-copyr-span\" mbr-link-type=\"name\">Brooke Road United Methodist Church</span> - All Rights Reserved</p>\n                </div>\n            </div>\n            <div class=\"mbr-col-sm-12 mbr-col-md-6 mbr-col-lg-6\" mbr-if=\"showIcons\">\n                <div class=\"icons-list mbr-flex flex-wrap\" mbr-list mbr-list-grow=\"iconsCount\" mbr-link-type=\"socials\" mbr-class=\"{'mbr-jc-c': flexContent == 2,\n                         'mbr-jc-e': flexContent == 3}\">\n                    <a href=\"https://www.linkedin.com/in/8b-com/\" target=\"_blank\" class=\"iconfont-wrapper\">\n                        <span mbr-icon class=\"amp-iconfont animation-normal fa-linkedin-square fa\"></span>\n                    </a>\n                    <a href=\"https://twitter.com/8bSiteBuilder\" target=\"_blank\" class=\"iconfont-wrapper\">\n                        <span mbr-icon class=\"amp-iconfont animation-normal fa-twitter-square fa\"></span>\n                    </a>\n                    <a href=\"https://www.facebook.com/8bcom/\" target=\"_blank\" class=\"iconfont-wrapper\">\n                        <span mbr-icon class=\"amp-iconfont animation-normal fa-facebook-square fa\"></span>\n                    </a>\n                    <a href=\"https://www.youtube.com/channel/UCIl8JHjLsqZNOdgBOYC_MRQ\" target=\"_blank\" class=\"iconfont-wrapper\">\n                        <span mbr-icon class=\"amp-iconfont animation-normal fa-youtube-square fa\"></span>\n                    </a>\n                    <a href=\"https://plus.google.com/u/7/106047475263886972918\" target=\"_blank\" class=\"iconfont-wrapper\">\n                        <span mbr-icon class=\"amp-iconfont animation-normal fa-google-plus-square fa\"></span>\n                    </a>\n                    \n                    \n                </div>\n            </div>\n        </div>\n    </div>\n</section>",
-          "_cid": "sBzgvvIGtc",
-          "_anchor": "footer1-5",
-          "_protectedParams": [],
-          "_global": true,
-          "_once": false,
-          "_params": {}
-        },
         {
           "alias": false,
           "_styles": {
@@ -255,34 +198,37 @@
           "_styles": {
             "padding-top": "(@paddingTop * 1rem)",
             "padding-bottom": "(@paddingBottom * 1rem)",
-            "& when (@bg-type = 'color')": {
-              "background-color": "@bg-value"
-            },
-            "& when (@bg-type = 'image')": {
-              "background-image": "url(@bg-value)",
-              ".mbr-overlay": {
-                "background-color": "@overlayColor",
-                "opacity": "@overlayOpacity"
-              }
-            },
-            "@media (max-width: 768px)": {
-              ".title-wrap": {
+            "background-color": "@bgColor",
+            ".image": {
+              "& when not (@rowReverse)": {
+                "@media (min-width: 992px)": {
+                  "padding-left": "1rem",
+                  "padding-right": "3rem"
+                }
+              },
+              "& when (@rowReverse)": {
+                "@media (min-width: 992px)": {
+                  "padding-left": "3rem",
+                  "padding-right": "1rem"
+                }
+              },
+              "@media (max-width: 991px)": {
                 "padding-bottom": "2rem"
               }
             },
-            ".display-4": {
-              "font-size": "1.13rem"
+            "amp-img, img": {
+              "height": "auto"
             }
           },
-          "_name": "title3",
+          "_name": "content2",
           "_sourceTheme": "churchamp",
-          "_customHTML": "<section class=\"title3\" group=\"Article\" plugins=\"amp-main\">\n    <mbr-parameters>\n    <!--Block parameters controls (Blue \"Gear\" panel) -->\n    <header>Size</header>\n    <input type=\"range\" inline title=\"Top\" name=\"paddingTop\" min=\"0\" max=\"8\" step=\"1\" value=\"4\">\n    <input type=\"range\" inline title=\"Bottom\" name=\"paddingBottom\" min=\"0\" max=\"8\" step=\"1\" value=\"0\">\n   <header>Title</header>\n    <input type=\"checkbox\" title=\"Show Title\" name=\"showTitle\">\n    <input type=\"checkbox\" title=\"Show Subtitle\" name=\"showSubtitle\">\n    <header>Align</header>\n    <select title=\"Align\" name=\"titleAlign\" condition=\"showTitle || showSubtitle\">\n        <option value=\"1\">Left</option>\n        <option value=\"2\" selected>Center</option>\n        <option value=\"3\">Right</option>\n    </select>\n    <select title=\"Text Align\" name=\"textAlign\">\n        <option value=\"1\" selected>Left</option>\n        <option value=\"2\">Center</option>\n        <option value=\"3\">Right</option>\n    </select>\n    <header>Background</header>\n    <fieldset type=\"background\" name=\"bg\" required>\n        <input type=\"image\" title=\"Background Image\" value=\"../_images/background2.jpg\">\n        <input type=\"color\" title=\"Background Color\" value=\"#ffffff\" selected>\n    </fieldset>\n    <input type=\"checkbox\" title=\"Overlay\" name=\"overlay\" checked condition=\"bg.type !== 'color'\">\n    <input type=\"color\" title=\"Overlay Color\" name=\"overlayColor\" value=\"#efefef\" condition=\"overlay && bg.type == 'image'\">\n    <input type=\"range\" inline title=\"Opacity\" name=\"overlayOpacity\" min=\"0\" max=\"1\" step=\"0.1\" value=\"0.5\" condition=\"overlay && bg.type == 'image'\">\n    </mbr-parameters>\n    <!--Block parameters controls (Blue \"Gear\" panel) -->\n    <div class=\"mbr-overlay\" mbr-if=\"overlay && bg.type !== 'color'\"></div>\n    <div class=\"container\">\n        <div class=\"title mbr-pb-5\" mbr-class=\"{'align-center':titleAlign==2,\n                         'align-right':titleAlign==3}\" mbr-if=\"showTitle || showSubtitle\">\n            <h3 class=\"mbr-section-title mbr-fonts-style mbr-bold section-title\" mbr-theme-style=\"display-2\" mbr-if=\"showTitle\" data-app-selector=\".mbr-section-title\"></h3>\n            <h4 class=\"mbr-subtitle mbr-fonts-style mbr-pt-2 section-subtitle\" mbr-theme-style=\"display-4\" mbr-if=\"showSubtitle\" data-app-selector=\".mbr-subtitle\"></h4>\n        </div>\n        <div class=\"mbr-row\">\n            <div class=\"mbr-col-sm-12 mbr-col-md-12 mbr-col-lg-12\">\n                <p class=\"mbr-text mbr-pb-4 mbr-fonts-style\" mbr-theme-style=\"display-7\" data-app-selector=\".mbr-text\" mbr-class=\"{'align-center': textAlign == 2,\n                               'align-right': textAlign == 3}\"><b>PIANO ACCOMPANIST NEEDED\n</b><br>Job Description:<br><b><br>Ministry Focus:</b><br>*Playing weekly music in person Sundays at 10am<br>*Accompany special music<br><br><b>Occasional Duties:</b><br>*Play music for special occasions and services (Funerals, weddings, Ash Wednesday, Maundy Thursday, Good Friday, Christmas Eve, etc.) in consultation with pastor.<br><br><b>Skills and</b> <b>Requirements</b>:<br>*Ability to read music, and to communicate with people effectively<br>*Able to work with a minimum level of supervision<br>*Must have church authorized background check<br><b><br>Compensation:</b><br>*$15 an hour<br><br><b>Commitment</b>:<br>*Five (5) hours per week<br>*Sunday Morning Worship; preparation as needed (church open for piano rehearsal throughout the week)<br>*Planning for music arrangements when not available<br><br><b>Benefits:</b><br>Four weeks off each year<br>To apply, please send a resume to Church Administrator Lori Vowles at brookeroadumc@outlook.com. To learn more about our church, visit<br>www.the-brooke.org or contact Pastor Violet Johnicker with questions:<br>violet@the-brooke.org&nbsp; &nbsp;<br></p>\n                <p class=\"mbr-text mbr-pb-4 mbr-fonts-style\" mbr-theme-style=\"display-7\" data-app-selector=\".mbr-text\" mbr-class=\"{'align-center': textAlign == 2,\n                               'align-right': textAlign == 3}\"></p>\n                <p class=\"mbr-text mbr-pb-4 mbr-fonts-style\" mbr-theme-style=\"display-7\" data-app-selector=\".mbr-text\" mbr-class=\"{'align-center': textAlign == 2,\n                               'align-right': textAlign == 3}\"></p>\n                <p>\n            </p></div>\n        </div>\n    </div>\n</section>",
-          "_cid": "sJFeePrvsy",
+          "_customHTML": "<section class=\"content2\" group=\"Article\" plugins=\"amp-main\">\n    <mbr-parameters>\n    <!-- Block parameters controls (Blue \"Gear\" panel) -->\n    <header>Show/Hide</header>\n    <input type=\"checkbox\" title=\"Show Title\" name=\"showTitle\" checked>\n    <input type=\"checkbox\" title=\"Show Text\" name=\"showText\" checked>\n    <header>Size</header>\n    <input type=\"range\" inline title=\"Top\" name=\"paddingTop\" min=\"0\" max=\"10\" step=\"1\" value=\"5\">\n    <input type=\"range\" inline title=\"Bottom\" name=\"paddingBottom\" min=\"0\" max=\"10\" step=\"1\" value=\"2\">\n    <input type=\"range\" inline title=\"Image Width\" name=\"mediaSize\" min=\"1\" max=\"5\" step=\"1\" value=\"3\" required>\n    <input type=\"checkbox\" name=\"rowReverse\" title=\"Reverse\">\n    <select title=\"Text Align\" name=\"align\">\n        <option value=\"1\" selected>Left</option>\n        <option value=\"2\">Center</option>\n        <option value=\"3\">Right</option>\n    </select>\n    <input type=\"color\" title=\"Background Color\" name=\"bgColor\" value=\"#ffffff\" required>\n    <!-- End block parameters -->\n    </mbr-parameters>\n    \n    <div class=\"container\">\n        <div class=\"mbr-row\" mbr-class=\"{'mbr-row-reverse' : rowReverse}\">\n            <div class=\"image mbr-col-sm-12 mbr-col-md-12\" mbr-class=\"{'mbr-col-lg-3': mediaSize == 1,\n                             'mbr-col-lg-4': mediaSize==2,\n                             'mbr-col-lg-6': mediaSize==3,\n                             'mbr-col-lg-8': mediaSize==4,\n                             'mbr-col-lg-9': mediaSize==5}\">\n                <amp-img src=\"@PROJECT_PATH@/assets/images/piano-1000x668.jpg\" layout=\"responsive\" width=\"505.98802395209583\" height=\"338\" alt=\"image\" class=\"mobirise-loader mobirise-loader\">\n                    <div placeholder class=\"placeholder\"></div>\n                    <img class=\"mbr-temp\" src=\"@PROJECT_PATH@/assets/images/piano-1000x668.jpg\" alt>\n                </amp-img>\n            </div>\n            <div class=\"text-wrap mbr-col-sm-12 mbr-col-md-12\" mbr-class=\"{'mbr-col-lg-3': mediaSize == 5,\n                             'mbr-col-lg-4': mediaSize==4,\n                             'mbr-col-lg-6': mediaSize==3,\n                             'mbr-col-lg-8': mediaSize==2,\n                             'mbr-col-lg-9': mediaSize==1,\n                             'align-center': align == 2,\n                             'align-right': align == 3}\">\n                <h3 class=\"mbr-section-title mbr-bold mbr-fonts-style section-title mbr-pt-2\" mbr-theme-style=\"display-5\" mbr-if=\"showTitle\" data-app-selector=\".mbr-section-title\">PIANO ACCOMPANIST NEEDED</h3>\n                <p class=\"mbr-text mbr-fonts-style\" mbr-class=\"{'mbr-pt-4' : showTitle}\" mbr-theme-style=\"display-7\" mbr-if=\"showText\" data-app-selector=\".mbr-text\"><b>Job Description:</b><br><br><b>Ministry Focus:</b><br>*Playing weekly music in person Sundays at 10am<br>*Accompany special music<br><br><b>Occasional Duties:</b><br>*Play music for special occasions and services (Funerals, weddings, Ash Wednesday, Maundy Thursday, Good Friday, Christmas Eve, etc.) in consultation with pastor.<br><br><b>Skills and Requirements:</b><br>*Ability to read music, and to communicate with people effectively<br>*Able to work with a minimum level of supervision<br>*Must have church authorized background check<br><b><br>Compensation:</b><br>*$15 an hour<br><br><b>Commitment:</b><br>*Five (5) hours per week<br>*Sunday Morning Worship; preparation as needed (church open for piano rehearsal throughout the week)<br>*Planning for music arrangements when not available<br><br><b>Benefits:</b><br>Four weeks off each year<br>To apply, please send a resume to Church Administrator Lori Vowles at brookeroadumc@outlook.com. To learn more about our church, visit<br>www.the-brooke.org or contact Pastor Violet Johnicker with questions:<br>violet@the-brooke.org&nbsp; &nbsp;<br></p>\n            </div>\n        </div>\n    </div>\n</section>",
+          "_cid": "sJFnA7KNeG",
+          "_anchor": "content2-15",
           "_protectedParams": [],
           "_global": false,
           "_once": false,
-          "_params": {},
-          "_anchor": "title3-13"
+          "_params": {}
         }
       ]
     },
@@ -712,103 +658,6 @@
           "_customHTML": "<section class=\"footer2\" group=\"Footers\" plugins=\"amp-main\" global=\"\">\n    <mbr-parameters>\n    <!-- Block parameters controls (Blue \"Gear\" panel) -->\n    <header>Size</header>\n    <select title=\"Block Type\" name=\"typeBlock\">\n        <option value=\"1\" selected=\"\">Type 1</option>\n        <option value=\"2\">Type 2</option>\n    </select>\n    <!--  -->\n    <input type=\"checkbox\" title=\"Reverse Content\" name=\"reverseContent\" condition=\"typeBlock==2\">\n    <input type=\"checkbox\" title=\"Full Width\" name=\"fullWidth\" checked=\"\">\n    <input type=\"range\" inline=\"\" title=\"Top\" name=\"paddingTop\" min=\"0\" max=\"10\" step=\"1\" value=\"4\">\n    <input type=\"range\" inline=\"\" title=\"Bottom\" name=\"paddingBottom\" min=\"0\" max=\"10\" step=\"1\" value=\"5\">\n    <!--  -->\n    <header>Text/Link Color</header>\n    <input type=\"color\" title=\"Text/Link Color\" name=\"textLinkColor\" value=\"#cdcdcd\">\n    <header>Icons</header>\n    <input type=\"checkbox\" title=\"Show Icons\" name=\"showIcons\" checked=\"\">\n    <input type=\"range\" inline=\"\" title=\"Icons Size\" name=\"iconsSize\" min=\"1\" max=\"3\" step=\"0.25\" value=\"2\">\n    <input type=\"range\" inline=\"\" title=\"Icons Padding\" name=\"iconsPadding\" min=\"0.5\" max=\"3\" step=\"0.25\" value=\"0.5\">\n    <header>Links Counter</header>\n    <input type=\"range\" inline=\"\" title=\"Links Count\" name=\"linksCount\" min=\"0\" max=\"8\" step=\"1\" value=\"8\">\n    <!--  -->\n    <header>Background</header>\n    <fieldset type=\"background\" name=\"bg\">\n        <input type=\"image\" title=\"Background Image\" value=\"@THEME_PATH@/components/_images/background4.jpg\">\n        <input type=\"color\" title=\"Background Color\" value=\"#1B2125\" selected=\"\">\n    </fieldset>\n    <!--  -->\n    <input type=\"checkbox\" title=\"Overlay\" name=\"overlay\" checked=\"\" condition=\"bg.type!='color'\">\n    <input type=\"color\" title=\"Overlay Color\" name=\"overlayColor\" value=\"#000000\" condition=\"bg.type!='color' &amp;&amp; overlay\">\n    <input type=\"range\" inline=\"\" title=\"Overlay Opacity\" name=\"overlayOpacity\" min=\"0\" max=\"1\" step=\"0.1\" value=\"0.4\" condition=\"bg.type!='color' &amp;&amp; overlay\">\n    <!-- End block parameters -->\n    </mbr-parameters>\n    <div class=\"mbr-overlay\" mbr-if=\"overlay &amp;&amp; bg.type !== 'color'\"></div>\n    <div class=\"footer-container\" mbr-class=\"{'container': !fullWidth,\n                     'container-fluid': fullWidth,\n                     'mbr-jc-c': (!showCopyright || !showItems) &amp;&amp; typeBlock==2,\n                     'mbr-flex': typeBlock==2,\n                     'mbr-row-reverse': reverseContent}\">\n        <div class=\"mbr-row\">\n            <div class=\"mbr-col-sm-12 mbr-col-md-6 mbr-col-lg-4 mbr-flex mbr-jc-c\">\n                <amp-img src=\"@PROJECT_PATH@/assets/images/footer-logo.png\" width=\"317.5280898876405\" height=\"90\" alt=\"image\" class=\"mobirise-loader mobirise-loader\">\n                    <div placeholder=\"\" class=\"placeholder\"></div>\n                    <img class=\"mbr-temp\" src=\"@PROJECT_PATH@/assets/images/footer-logo.png\" alt=\"\">\n                </amp-img>\n            </div>\n            <div class=\"mbr-col-sm-12 mbr-col-md-6 mbr-col-lg-4\">\n                <h3 class=\"custom-footer-heading mbr-fonts-style mbr-white\" mbr-theme-style=\"display-5\" data-app-selector=\".custom-footer-heading\">Contact Us</h3>\n                <div class=\"custom-footer-list\">\n                    <div>\n                        <div class=\"iconfont-wrapper\" mbr-if=\"showIcons\">\n                            <span mbr-icon=\"\" class=\"amp-iconfont fa fa-map-marker\"></span>\n                        </div>\n                        <p class=\"custom-footer-text mbr-fonts-style\" mbr-theme-style=\"display-4\">St. Paul Church</p>\n                    </div>\n                    <div>\n                        <div class=\"iconfont-wrapper\" mbr-if=\"showIcons\">\n                            <span mbr-icon=\"\" class=\"amp-iconfont fa fa-phone\"></span>\n                        </div>\n                        <p class=\"custom-footer-text mbr-fonts-style\" mbr-theme-style=\"display-4\">(123) 456-78910 - (321) 199-3265</p>\n                    </div>\n                    <div>\n                        <div class=\"iconfont-wrapper\" mbr-if=\"showIcons\">\n                            <span mbr-icon=\"\" class=\"amp-iconfont fa fa-envelope\"></span>\n                        </div>\n                        <p class=\"custom-footer-link mbr-fonts-style\" mbr-theme-style=\"display-4\">info@example.com</p>\n                    </div>\n                    <div>\n                        <div class=\"iconfont-wrapper\" mbr-if=\"showIcons\">\n                            <span mbr-icon=\"\" class=\"amp-iconfont fa fa-globe\"></span>\n                        </div>\n                        <p class=\"custom-footer-link mbr-fonts-style\" mbr-theme-style=\"display-4\">www.example.com</p>\n                    </div>\n                </div>\n            </div>\n            <div class=\"mbr-col-sm-12 mbr-col-md-6 mbr-col-lg-4\">\n                <h3 class=\"custom-footer-heading mbr-fonts-style mbr-white\" mbr-theme-style=\"display-5\" data-app-selector=\".custom-footer-heading\">Useful Links</h3>\n                <div class=\"custom-footer-list list-colums\" mbr-list=\"\" mbr-list-grow=\"linksCount\">\n                    <div class=\"custom-footer-list-item\">\n                        <div class=\"iconfont-wrapper\">\n                            <span mbr-icon=\"\" class=\"amp-iconfont fa fa-angle-right\"></span>\n                        </div>\n                        <p class=\"custom-footer-link mbr-fonts-style\" mbr-theme-style=\"display-7\">Church Theme Ideas</p>\n                    </div>\n                    <div class=\"custom-footer-list-item\">\n                        <div class=\"iconfont-wrapper\">\n                            <span mbr-icon=\"\" class=\"amp-iconfont fa fa-angle-right\"></span>\n                        </div>\n                        <p class=\"custom-footer-link mbr-fonts-style\" mbr-theme-style=\"display-7\">Church Layout</p>\n                    </div>\n                    <div class=\"custom-footer-list-item\">\n                        <div class=\"iconfont-wrapper\">\n                            <span mbr-icon=\"\" class=\"amp-iconfont fa fa-angle-right\"></span>\n                        </div>\n                        <p class=\"custom-footer-link mbr-fonts-style\" mbr-theme-style=\"display-7\">Best Church Themes</p>\n                    </div>\n                    <div class=\"custom-footer-list-item\">\n                        <div class=\"iconfont-wrapper\">\n                            <span mbr-icon=\"\" class=\"amp-iconfont fa fa-angle-right\"></span>\n                        </div>\n                        <p class=\"custom-footer-link mbr-fonts-style\" mbr-theme-style=\"display-7\">Religious Websites</p>\n                    </div>\n                    <div class=\"custom-footer-list-item\">\n                        <div class=\"iconfont-wrapper\">\n                            <span mbr-icon=\"\" class=\"amp-iconfont fa fa-angle-right\"></span>\n                        </div>\n                        <p class=\"custom-footer-link mbr-fonts-style\" mbr-theme-style=\"display-7\">Church Template</p>\n                    </div>\n                    <div class=\"custom-footer-list-item\">\n                        <div class=\"iconfont-wrapper\">\n                            <span mbr-icon=\"\" class=\"amp-iconfont fa fa-angle-right\"></span>\n                        </div>\n                        <p class=\"custom-footer-link mbr-fonts-style\" mbr-theme-style=\"display-7\">Top Church Websites</p>\n                    </div>\n                    <div class=\"custom-footer-list-item\">\n                        <div class=\"iconfont-wrapper\">\n                            <span mbr-icon=\"\" class=\"amp-iconfont fa fa-angle-right\"></span>\n                        </div>\n                        <p class=\"custom-footer-link mbr-fonts-style\" mbr-theme-style=\"display-7\">Annual Church Themes</p>\n                    </div>\n                    <div class=\"custom-footer-list-item\">\n                        <div class=\"iconfont-wrapper\">\n                            <span mbr-icon=\"\" class=\"amp-iconfont fa fa-angle-right\"></span>\n                        </div>\n                        <p class=\"custom-footer-link mbr-fonts-style\" mbr-theme-style=\"display-7\">Free Church Website</p>\n                    </div>\n                </div>\n            </div>\n        </div>\n    </div>\n</section>",
           "_cid": "rN3ZZ07OBT",
           "_anchor": "footer2-g",
-          "_protectedParams": [],
-          "_global": true,
-          "_once": false,
-          "_params": {}
-        },
-        {
-          "_styles": {
-            "padding-top": "(@paddingTop * 1rem)",
-            "padding-bottom": "(@paddingBottom * 1rem)",
-            "& when (@bg-type = 'color')": {
-              "background-color": "@bg-value"
-            },
-            "& when (@bg-type = 'image')": {
-              "background-image": "url(@bg-value)",
-              ".mbr-overlay": {
-                "background-color": "@overlayColor",
-                "opacity": "@overlayOpacity"
-              }
-            },
-            ".link-items": {
-              ".fLink": {
-                "width": "auto"
-              }
-            },
-            "& when (@typeBlock = '1')": {
-              ".mbr-row": {
-                "margin": "0",
-                "& when (@showCopyright)": {
-                  "&:nth-child(1)": {
-                    "margin-bottom": "1rem"
-                  }
-                }
-              }
-            },
-            "& when (@typeBlock = '2')": {
-              ".footer-container": {
-                "& when (@showCopyright) and (@showItems)": {
-                  "@media (min-width: 992px)": {
-                    "justify-content": "space-between"
-                  },
-                  "@media (max-width: 991px)": {
-                    "flex-direction": "column",
-                    "align-items": "center"
-                  }
-                }
-              },
-              ".mbr-row": {
-                "width": "auto",
-                "@media (max-width: 992px)": {
-                  "padding": "0",
-                  "width": "100%",
-                  "justify-content": "center",
-                  "& when (@showCopyright)": {
-                    "&:nth-child(1)": {
-                      "margin-bottom": "1rem"
-                    }
-                  }
-                }
-              },
-              ".copyright": {
-                "width": "auto"
-              }
-            },
-            ".iconfont-wrapper": {
-              "margin-right": "(@iconsPadding * 1rem)",
-              "@media (max-width: 992px)": {
-                "margin-right": "0.5rem"
-              },
-              "height": "(@iconsSize * 1rem)",
-              "width": "(@iconsSize * 1rem)",
-              "display": "inline-block"
-            },
-            ".amp-iconfont": {
-              "font-size": "(@iconsSize * 1rem)",
-              "width": "(@iconsSize * 1rem)",
-              "color": "@primaryColor"
-            },
-            ".custom-copyr-span": {
-              "color": "@primaryColor"
-            },
-            ".mbr-jc-b": {
-              "@media (max-width: 767px)": {
-                "justify-content": "center"
-              }
-            },
-            ".icons-list": {
-              "@media (max-width: 767px)": {
-                "margin-top": "15px"
-              }
-            }
-          },
-          "_name": "footer1",
-          "_customHTML": "<section class=\"footer_demo\" group=\"demo\" plugins=\"amp-main\" global>\n    <mbr-parameters>\n    <!-- Block parameters controls (Blue \"Gear\" panel) -->\n    <header>Size</header>\n    <select title=\"Block Type\" name=\"typeBlock\">\n        <option value=\"1\" selected>Type 1</option>\n        <option value=\"2\">Type 2</option>\n    </select>\n    <!--  -->\n    <input type=\"checkbox\" title=\"Reverse Content\" name=\"reverseContent\" condition=\"typeBlock==2\">\n    <input type=\"checkbox\" title=\"Full Width\" name=\"fullWidth\" checked>\n    <input type=\"range\" inline title=\"Top\" name=\"paddingTop\" min=\"0\" max=\"10\" step=\"1\" value=\"2\">\n    <input type=\"range\" inline title=\"Bottom\" name=\"paddingBottom\" min=\"0\" max=\"10\" step=\"1\" value=\"2\">\n    <!--  -->\n    <header>Show/Hide</header>\n    <input type=\"checkbox\" title=\"Copyright\" name=\"showCopyright\" checked>\n    <input type=\"checkbox\" title=\"Icons\" name=\"showIcons\">\n    <!--  -->\n    <header>Icons</header>\n    <input type=\"range\" inline title=\"Icons Size\" name=\"iconsSize\" min=\"1\" max=\"3\" step=\"0.25\" value=\"2\">\n    <input type=\"range\" inline title=\"Icons Padding\" name=\"iconsPadding\" min=\"0.5\" max=\"3\" step=\"0.25\" value=\"1\">\n    <select title=\"Position\" name=\"flexContent\">\n        <option value=\"1\">Left</option>\n        <option value=\"2\" selected>Center</option>\n        <option value=\"3\">Right</option>\n    </select>\n    <input type=\"range\" inline title=\"Icons Count\" name=\"iconsCount\" min=\"1\" max=\"10\" value=\"5\" step=\"1\" required>\n    <!--  -->\n    <header>Background</header>\n    <fieldset type=\"background\" name=\"bg\">\n        <input type=\"image\" title=\"Background Image\" value=\"@THEME_PATH@/components/_images/background4.jpg\">\n        <input type=\"color\" title=\"Background Color\" value=\"#171C1F\" selected>\n    </fieldset>\n    <!--  -->\n    <input type=\"checkbox\" title=\"Overlay\" name=\"overlay\" checked condition=\"bg.type!='color'\">\n    <input type=\"color\" title=\"Overlay Color\" name=\"overlayColor\" value=\"#000000\" condition=\"bg.type!='color' && overlay\">\n    <input type=\"range\" inline title=\"Overlay Opacity\" name=\"overlayOpacity\" min=\"0\" max=\"1\" step=\"0.1\" value=\"0.4\" condition=\"bg.type!='color' && overlay\">\n    <!-- End block parameters -->\n    </mbr-parameters>\n    <div class=\"mbr-overlay\" mbr-if=\"overlay && bg.type !== 'color'\"></div>\n    <div class=\"footer-container\" mbr-class=\"{'container': !fullWidth,\n                     'container-fluid': fullWidth,\n                     'mbr-jc-c': (!showCopyright || !showItems) && typeBlock==2,\n                     'mbr-flex': typeBlock==2,\n                     'mbr-row-reverse': reverseContent}\">\n        <div class=\"row mbr-flex mbr-jc-b\">\n            <div class=\"mbr-col-sm-12 mbr-col-md-12 mbr-col-lg-12\">\n                <div class=\"copyright mbr-px-2 mbr-flex mbr-jc-c\" mbr-if=\"showCopyright\">\n                    <p class=\"mbr-text mbr-fonts-style mbr-white align-center custom-copyr-text\" mbr-theme-style=\"display-7\" data-app-selector=\".copyright .mbr-text\" data-app-placeholder=\"Type Text\">© Copyright 2025 -&nbsp;<span class=\"custom-copyr-span\" mbr-link-type=\"name\">Example HTML Template</span> - All Rights Reserved</p>\n                </div>\n            </div>\n        </div>\n    </div>\n</section>",
-          "_cid": "rbwTYc3YZo",
-          "_anchor": "footer1-20",
-          "_PHPplaceholders": [],
-          "_JSplaceholders": [],
           "_protectedParams": [],
           "_global": true,
           "_once": false,
@@ -1271,63 +1120,6 @@
           "_anchor": "contacts6-f",
           "_protectedParams": [],
           "_global": false,
-          "_once": false,
-          "_params": {}
-        },
-        {
-          "alias": false,
-          "_styles": {
-            "padding-top": "(@paddingTop * 1rem)",
-            "padding-bottom": "(@paddingBottom * 1rem)",
-            "& when (@bg-type = 'color')": {
-              "background-color": "@bg-value"
-            },
-            "& when (@bg-type = 'image')": {
-              "background-image": "url(@bg-value)",
-              ".mbr-overlay": {
-                "background-color": "@overlayColor",
-                "opacity": "@overlayOpacity"
-              }
-            },
-            ".link-items": {
-              ".fLink": {
-                "width": "auto"
-              }
-            },
-            ".iconfont-wrapper": {
-              "margin-right": "(@iconsPadding * 1rem)",
-              "@media (max-width: 992px)": {
-                "margin-right": "0.5rem"
-              },
-              "height": "(@iconsSize * 1rem)",
-              "width": "(@iconsSize * 1rem)"
-            },
-            ".amp-iconfont": {
-              "font-size": "(@iconsSize * 1rem)",
-              "width": "(@iconsSize * 1rem)",
-              "color": "@primaryColor"
-            },
-            ".custom-copyr-span": {
-              "color": "@primaryColor"
-            },
-            ".mbr-jc-b": {
-              "@media (max-width: 767px)": {
-                "justify-content": "center"
-              }
-            },
-            ".icons-list": {
-              "@media (max-width: 767px)": {
-                "margin-top": "15px"
-              }
-            }
-          },
-          "_name": "footer1",
-          "_sourceTheme": "churchamp",
-          "_customHTML": "<section class=\"footer1\" group=\"Footers\" plugins=\"amp-main\" global>\n    <mbr-parameters>\n    <!-- Block parameters controls (Blue \"Gear\" panel) -->\n    <header>Size</header>\n    <!--  -->\n    <input type=\"checkbox\" title=\"Reverse Content\" name=\"reverseContent\" condition=\"showCopyright\">\n    <input type=\"checkbox\" title=\"Full Width\" name=\"fullWidth\" checked>\n    <input type=\"range\" inline title=\"Top\" name=\"paddingTop\" min=\"0\" max=\"10\" step=\"1\" value=\"2\">\n    <input type=\"range\" inline title=\"Bottom\" name=\"paddingBottom\" min=\"0\" max=\"10\" step=\"1\" value=\"2\">\n    <!--  -->\n    <header>Show/Hide</header>\n    <input type=\"checkbox\" title=\"Copyright\" name=\"showCopyright\" checked>\n    <input type=\"checkbox\" title=\"Icons\" name=\"showIcons\" checked>\n    <!--  -->\n    <header>Icons</header>\n    <input type=\"range\" inline title=\"Icons Size\" name=\"iconsSize\" min=\"1\" max=\"3\" step=\"0.25\" value=\"2\">\n    <input type=\"range\" inline title=\"Icons Padding\" name=\"iconsPadding\" min=\"0.5\" max=\"3\" step=\"0.25\" value=\"1\">\n    <select title=\"Position\" name=\"flexContent\">\n        <option value=\"1\">Left</option>\n        <option value=\"2\" selected>Center</option>\n        <option value=\"3\">Right</option>\n    </select>\n    <input type=\"range\" inline title=\"Icons Count\" name=\"iconsCount\" min=\"1\" max=\"10\" value=\"5\" step=\"1\" required>\n    <!--  -->\n    <header>Background</header>\n    <fieldset type=\"background\" name=\"bg\">\n        <input type=\"image\" title=\"Background Image\" value=\"../_images/background4.jpg\">\n        <input type=\"color\" title=\"Background Color\" value=\"#171C1F\" selected>\n    </fieldset>\n    <!--  -->\n    <input type=\"checkbox\" title=\"Overlay\" name=\"overlay\" checked condition=\"bg.type!='color'\">\n    <input type=\"color\" title=\"Overlay Color\" name=\"overlayColor\" value=\"#000000\" condition=\"bg.type!='color' && overlay\">\n    <input type=\"range\" inline title=\"Overlay Opacity\" name=\"overlayOpacity\" min=\"0\" max=\"1\" step=\"0.1\" value=\"0.4\" condition=\"bg.type!='color' && overlay\">\n    <!-- End block parameters -->\n    </mbr-parameters>\n    <div class=\"mbr-overlay\" mbr-if=\"overlay && bg.type !== 'color'\"></div>\n    <div class=\"footer-container\" mbr-class=\"{'container': !fullWidth,\n                     'container-fluid': fullWidth}\">\n        <div class=\"mbr-row\" mbr-class=\"{'mbr-row-reverse': reverseContent}\">\n            <div class=\"mbr-col-sm-12 mbr-col-md-6 mbr-col-lg-6\">\n                <div class=\"copyright mbr-px-2 mbr-flex mbr-jc-c\" mbr-if=\"showCopyright\">\n                    <p class=\"mbr-text mbr-fonts-style mbr-white align-center custom-copyr-text\" mbr-theme-style=\"display-7\" data-app-selector=\".copyright .mbr-text\" data-app-placeholder=\"Type Text\">© Copyright 2021&nbsp;<span class=\"custom-copyr-span\" mbr-link-type=\"name\">Brooke Road United Methodist Church</span> - All Rights Reserved</p>\n                </div>\n            </div>\n            <div class=\"mbr-col-sm-12 mbr-col-md-6 mbr-col-lg-6\" mbr-if=\"showIcons\">\n                <div class=\"icons-list mbr-flex flex-wrap\" mbr-list mbr-list-grow=\"iconsCount\" mbr-link-type=\"socials\" mbr-class=\"{'mbr-jc-c': flexContent == 2,\n                         'mbr-jc-e': flexContent == 3}\">\n                    <a href=\"https://www.linkedin.com/in/8b-com/\" target=\"_blank\" class=\"iconfont-wrapper\">\n                        <span mbr-icon class=\"amp-iconfont animation-normal fa-linkedin-square fa\"></span>\n                    </a>\n                    <a href=\"https://twitter.com/8bSiteBuilder\" target=\"_blank\" class=\"iconfont-wrapper\">\n                        <span mbr-icon class=\"amp-iconfont animation-normal fa-twitter-square fa\"></span>\n                    </a>\n                    <a href=\"https://www.facebook.com/8bcom/\" target=\"_blank\" class=\"iconfont-wrapper\">\n                        <span mbr-icon class=\"amp-iconfont animation-normal fa-facebook-square fa\"></span>\n                    </a>\n                    <a href=\"https://www.youtube.com/channel/UCIl8JHjLsqZNOdgBOYC_MRQ\" target=\"_blank\" class=\"iconfont-wrapper\">\n                        <span mbr-icon class=\"amp-iconfont animation-normal fa-youtube-square fa\"></span>\n                    </a>\n                    <a href=\"https://plus.google.com/u/7/106047475263886972918\" target=\"_blank\" class=\"iconfont-wrapper\">\n                        <span mbr-icon class=\"amp-iconfont animation-normal fa-google-plus-square fa\"></span>\n                    </a>\n                    \n                    \n                </div>\n            </div>\n        </div>\n    </div>\n</section>",
-          "_cid": "sC3aKe0FgQ",
-          "_anchor": "footer1-g",
-          "_protectedParams": [],
-          "_global": true,
           "_once": false,
           "_params": {}
         },
