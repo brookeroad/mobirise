@@ -66,7 +66,7 @@
     "siteUrl": false,
     "cookiesAlert": false,
     "gdpr": false,
-    "publishChangesOnly": true
+    "publishChangesOnly": false
   },
   "pages": {
     "index.html": {
@@ -79,6 +79,50 @@
         "html_before": ""
       },
       "components": [
+        {
+          "_styles": {
+            "padding-top": "(@paddingTop * 1rem)",
+            "padding-bottom": "(@paddingBottom * 1rem)",
+            "& when (@bg-type = 'color')": {
+              "background-color": "@bg-value"
+            },
+            "& when (@bg-type = 'image')": {
+              "background-image": "url(@bg-value)",
+              ".mbr-overlay": {
+                "background-color": "@overlayColor",
+                "opacity": "@overlayOpacity"
+              }
+            },
+            ".map-block": {
+              "width": "100%",
+              "@media (max-width: 992px)": {
+                "margin-bottom": "2rem"
+              },
+              ".google-map, iframe, amp-iframe": {
+                "min-height": "(@mapHeight * 1px)",
+                "width": "100%"
+              }
+            },
+            ".container-fluid": {
+              "padding": "0"
+            },
+            ".mbr-col-md-12": {
+              "@media (min-width: 768px)": {
+                "padding": "0"
+              }
+            }
+          },
+          "_name": "contacts6",
+          "_customHTML": "<section class=\"contacts6 map\" group=\"Contacts\" plugins=\"amp-main, amp-iframe\">\n    <mbr-parameters>\n    <!--  -->\n    <header>Size</header>\n    <input type=\"range\" inline title=\"Top\" name=\"paddingTop\" min=\"0\" max=\"10\" step=\"1\" value=\"2\">\n    <input type=\"range\" inline title=\"Bottom\" name=\"paddingBottom\" min=\"0\" max=\"10\" step=\"1\" value=\"0\">\n    <input type=\"checkbox\" title=\"Full Width\" name=\"fullWidth\">\n    <!--  -->\n    <header>Title</header>\n    <input type=\"checkbox\" title=\"Show Title\" name=\"showTitle\" checked>\n    <input type=\"checkbox\" title=\"Show Subtitle\" name=\"showSubtitle\">\n    <select title=\"Align\" name=\"titleAlign\" condition=\"showTitle || showSubtitle\">\n        <option value=\"1\">Left</option>\n        <option value=\"2\" selected>Center</option>\n        <option value=\"3\">Right</option>\n    </select>\n    <!--  -->\n    <header>Map</header>\n    <input type=\"range\" inline title=\"Map Height\" name=\"mapHeight\" min=\"400\" max=\"1200\" step=\"50\" value=\"400\">\n    <input type=\"map\" title=\"Map\" name=\"googleMap\" required place-id=\"1404 Brooke road, Rockford, IL 61109\" value=\"1404 Brooke road, Rockford, IL 61109\">\n    <!--  -->\n    <header>Background</header>\n    <fieldset type=\"background\" name=\"bg\" required>\n        <input type=\"color\" title=\"Background Color\" value=\"#ffffff\" selected>\n        <input type=\"image\" title=\"Background Image\" value=\"@THEME_PATH@/components/_images/background3.jpg\">\n    </fieldset>\n    <input type=\"checkbox\" title=\"Overlay\" name=\"overlay\" checked condition=\"bg.type !== 'color'\">\n    <input type=\"color\" title=\"Overlay Color\" name=\"overlayColor\" value=\"#efefef\" condition=\"overlay && bg.type == 'image'\">\n    <input type=\"range\" inline title=\"Opacity\" name=\"overlayOpacity\" min=\"0\" max=\"1\" step=\"0.1\" value=\"0.5\" condition=\"overlay && bg.type == 'image'\">\n    </mbr-parameters>\n    <div class=\"mbr-overlay\" mbr-if=\"overlay && bg.type !== 'color'\"></div>\n    <div mbr-class=\"{'container':!fullWidth,\n                     'container-fluid':fullWidth}\">\n        <div class=\"title mbr-pb-4\" mbr-if=\"showTitle || showSubtitle\" mbr-class=\"{'align-center': titleAlign == 2,\n                         'align-right': titleAlign == 3}\">\n            <h3 class=\"mbr-section-title mbr-bold mbr-fonts-style\" mbr-theme-style=\"display-5\" mbr-if=\"showTitle\" data-app-selector=\".mbr-section-title\">Our Location</h3>\n            <h4 class=\"mbr-section-subtitle mbr-fonts-style mbr-pt-2\" mbr-theme-style=\"display-5\" mbr-if=\"showSubtitle\" data-app-selector=\".mbr-section-subtitle\">Enter your block subtitle here</h4>\n        </div>\n        <div class=\"map-block mbr-col-md-12 mbr-jc-c mbr-flex mbr-m-auto mbr-column\" mbr-class=\"{'mbr-col-lg-6':blockWidth==2,\n                         'mbr-col-lg-8':blockWidth==1,\n                         'mbr-col-lg-4':blockWidth==3}\">\n            <div class=\"google-map\" mbr-map=\"googleMap\"></div>\n            <div class=\"map-placeholder placeholder-loader\">\n                <div placeholder class=\"placeholder\"></div>\n            </div>\n        </div>\n    </div>\n</section>",
+          "_cid": "rbwUrqyjw5",
+          "_anchor": "contacts6-2d",
+          "_PHPplaceholders": [],
+          "_JSplaceholders": [],
+          "_protectedParams": [],
+          "_global": false,
+          "_once": false,
+          "_params": {}
+        },
         {
           "alias": false,
           "_styles": {
@@ -133,50 +177,6 @@
           "_anchor": "footer1-5",
           "_protectedParams": [],
           "_global": true,
-          "_once": false,
-          "_params": {}
-        },
-        {
-          "_styles": {
-            "padding-top": "(@paddingTop * 1rem)",
-            "padding-bottom": "(@paddingBottom * 1rem)",
-            "& when (@bg-type = 'color')": {
-              "background-color": "@bg-value"
-            },
-            "& when (@bg-type = 'image')": {
-              "background-image": "url(@bg-value)",
-              ".mbr-overlay": {
-                "background-color": "@overlayColor",
-                "opacity": "@overlayOpacity"
-              }
-            },
-            ".map-block": {
-              "width": "100%",
-              "@media (max-width: 992px)": {
-                "margin-bottom": "2rem"
-              },
-              ".google-map, iframe, amp-iframe": {
-                "min-height": "(@mapHeight * 1px)",
-                "width": "100%"
-              }
-            },
-            ".container-fluid": {
-              "padding": "0"
-            },
-            ".mbr-col-md-12": {
-              "@media (min-width: 768px)": {
-                "padding": "0"
-              }
-            }
-          },
-          "_name": "contacts6",
-          "_customHTML": "<section class=\"contacts6 map\" group=\"Contacts\" plugins=\"amp-main, amp-iframe\">\n    <mbr-parameters>\n    <!--  -->\n    <header>Size</header>\n    <input type=\"range\" inline title=\"Top\" name=\"paddingTop\" min=\"0\" max=\"10\" step=\"1\" value=\"2\">\n    <input type=\"range\" inline title=\"Bottom\" name=\"paddingBottom\" min=\"0\" max=\"10\" step=\"1\" value=\"0\">\n    <input type=\"checkbox\" title=\"Full Width\" name=\"fullWidth\">\n    <!--  -->\n    <header>Title</header>\n    <input type=\"checkbox\" title=\"Show Title\" name=\"showTitle\" checked>\n    <input type=\"checkbox\" title=\"Show Subtitle\" name=\"showSubtitle\">\n    <select title=\"Align\" name=\"titleAlign\" condition=\"showTitle || showSubtitle\">\n        <option value=\"1\">Left</option>\n        <option value=\"2\" selected>Center</option>\n        <option value=\"3\">Right</option>\n    </select>\n    <!--  -->\n    <header>Map</header>\n    <input type=\"range\" inline title=\"Map Height\" name=\"mapHeight\" min=\"400\" max=\"1200\" step=\"50\" value=\"400\">\n    <input type=\"map\" title=\"Map\" name=\"googleMap\" required place-id=\"1404 Brooke road, Rockford, IL 61109\" value=\"1404 Brooke road, Rockford, IL 61109\">\n    <!--  -->\n    <header>Background</header>\n    <fieldset type=\"background\" name=\"bg\" required>\n        <input type=\"color\" title=\"Background Color\" value=\"#ffffff\" selected>\n        <input type=\"image\" title=\"Background Image\" value=\"@THEME_PATH@/components/_images/background3.jpg\">\n    </fieldset>\n    <input type=\"checkbox\" title=\"Overlay\" name=\"overlay\" checked condition=\"bg.type !== 'color'\">\n    <input type=\"color\" title=\"Overlay Color\" name=\"overlayColor\" value=\"#efefef\" condition=\"overlay && bg.type == 'image'\">\n    <input type=\"range\" inline title=\"Opacity\" name=\"overlayOpacity\" min=\"0\" max=\"1\" step=\"0.1\" value=\"0.5\" condition=\"overlay && bg.type == 'image'\">\n    </mbr-parameters>\n    <div class=\"mbr-overlay\" mbr-if=\"overlay && bg.type !== 'color'\"></div>\n    <div mbr-class=\"{'container':!fullWidth,\n                     'container-fluid':fullWidth}\">\n        <div class=\"title mbr-pb-4\" mbr-if=\"showTitle || showSubtitle\" mbr-class=\"{'align-center': titleAlign == 2,\n                         'align-right': titleAlign == 3}\">\n            <h3 class=\"mbr-section-title mbr-bold mbr-fonts-style\" mbr-theme-style=\"display-2\" mbr-if=\"showTitle\" data-app-selector=\".mbr-section-title\">Our Location</h3>\n            <h4 class=\"mbr-section-subtitle mbr-fonts-style mbr-pt-2\" mbr-theme-style=\"display-5\" mbr-if=\"showSubtitle\" data-app-selector=\".mbr-section-subtitle\">Enter your block subtitle here</h4>\n        </div>\n        <div class=\"map-block mbr-col-md-12 mbr-jc-c mbr-flex mbr-m-auto mbr-column\" mbr-class=\"{'mbr-col-lg-6':blockWidth==2,\n                         'mbr-col-lg-8':blockWidth==1,\n                         'mbr-col-lg-4':blockWidth==3}\">\n            <div class=\"google-map\" mbr-map=\"googleMap\"></div>\n            <div class=\"map-placeholder placeholder-loader\">\n                <div placeholder class=\"placeholder\"></div>\n            </div>\n        </div>\n    </div>\n</section>",
-          "_cid": "rbwUrqyjw5",
-          "_anchor": "contacts6-2d",
-          "_PHPplaceholders": [],
-          "_JSplaceholders": [],
-          "_protectedParams": [],
-          "_global": false,
           "_once": false,
           "_params": {}
         },
